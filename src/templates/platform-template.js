@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { PageContent, LineBreak } from '../components/layout'
+import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { ExternalLink } from '../components/link'
 

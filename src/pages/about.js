@@ -5,7 +5,6 @@ import { usePartnerLogos, usePlatformLogos } from '../hooks'
 import Img from 'gatsby-image'
 import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
-import { BulletedList, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
 
 // Specify the order in which the logos should appear in each logo cloud
