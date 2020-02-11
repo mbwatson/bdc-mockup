@@ -123,12 +123,12 @@ const Separator = styled.div`
 const ToolsPage = () => (
     <PageContent width="95%" maxWidth="1080px" center gutters>
         <SEO
-            title="Available Tools"
+            title="Platforms & Services"
             description=""
             keywords=""
         />
 
-        <Title>Tools & Analysis</Title>
+        <Title>Platforms & Services</Title>
 
         <Heading>Explore the BioData Catalyst Ecosystem</Heading>
         

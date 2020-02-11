@@ -16,8 +16,8 @@ export const menuItems = [
                 path: '/resources/data',
             },
             {
-                text: 'Tools',
-                path: '/resources/tools',
+                text: 'Services',
+                path: '/resources/services',
             },
             {
                 text: 'BYOD',

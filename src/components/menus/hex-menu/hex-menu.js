@@ -7,10 +7,10 @@ import { MenuItemDescription } from './hex-menu-descriptions'
 
 const carouselItems = [
     {
-        text: 'Tools',
+        text: 'Services',
         description: 'Take control of your data with customizable tools and workflows',
         icon: ToolsIcon,
-        path: '/resources/tools',
+        path: '/resources/services',
     },
     {
         text: 'Data',
