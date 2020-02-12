@@ -16,7 +16,7 @@ const DataPage = () => (
 
         <Title>Data</Title>
         
-        <Heading>How data works on BioData Catlyst</Heading>
+        <Heading>How data works on BioData Catalyst</Heading>
 
         <Paragraph>
             BioData Catalyst hosts a number of controlled datasets from the <ExternalLink to="https://www.nhlbiwgs.org/">Trans-omics for Precision Medicine</ExternalLink> (TOPMed) initiative.

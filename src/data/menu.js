@@ -16,12 +16,12 @@ export const menuItems = [
                 path: '/resources/data',
             },
             {
-                text: 'Services',
-                path: '/resources/services',
-            },
-            {
                 text: 'BYOD',
                 path: '/resources/byod',
+            },
+            {
+                text: 'Services',
+                path: '/resources/services',
             },
             {
                 text: 'Learn',

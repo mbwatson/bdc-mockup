@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
@@ -16,35 +17,47 @@ const KeyFeaturesList = styled.div`
     }
 `
 
-const LinkList = styled(Paragraph).attrs({ center: true })`
+const LinkList = styled(Paragraph)`
     & ${ ExternalLink } {
         margin: 0 1rem;
     }
 `
 
+const LogoContainer = styled.div`
+    min-width: 300px;
+    text-align: center;
+`
+
 export default ({ data }) => {
-    const { markdownRemark } = data // data.markdownRemark holds your post data
+    const { markdownRemark } = data
     const { frontmatter, html } = markdownRemark
+    const platformLogoFixed = frontmatter.logo.childImageSharp.fixed
+
     return (
         <PageContent width="95%" maxWidth="1080px" center gutters>
-            <div>
-                <Title>{ frontmatter.title }</Title>
+            
+            <LogoContainer>
+                <Img fixed={ platformLogoFixed } />
+            </LogoContainer>
 
-                <LinkList>
-                    <ExternalLink to={ frontmatter.links.homepage }>Website</ExternalLink>
-                    | 
-                    <ExternalLink to={ frontmatter.links.documentation }>Documentation</ExternalLink>
-                </LinkList>
-                
-                <Paragraph>
-                    { frontmatter.teaser }
-                </Paragraph>
+            <Title center>BioData Catalyst</Title>
+            <Heading center>Powered by { frontmatter.title }</Heading>
+            
+            <LinkList center>
+                <ExternalLink to={ frontmatter.links.homepage }>Website</ExternalLink> | 
+                <ExternalLink to={ frontmatter.links.documentation }>Documentation</ExternalLink>
+            </LinkList>
 
-                <Heading>Key Features</Heading>
-                
-                <KeyFeaturesList dangerouslySetInnerHTML={{ __html: html }} />
-                
-            </div>
+            <Heading>About { frontmatter.title }</Heading>
+
+            <Paragraph>
+                { frontmatter.teaser }
+            </Paragraph>
+
+            <Heading>Key Features</Heading>
+            
+            <KeyFeaturesList dangerouslySetInnerHTML={{ __html: html }} />
+
         </PageContent>
     )
 }
@@ -59,6 +72,13 @@ export const platformQuery = graphql`
                     documentation
                 }
                 teaser
+                logo {
+                    childImageSharp {
+                        fixed(fit: COVER, width: 300) {
+                            ...GatsbyImageSharpFixed
+                        }
+                    }
+                }
             }
             html
         }

@@ -1,6 +1,7 @@
 ---
-title: BioData Catalyst Powered by Dockstore
+title: Dockstore
 path: /platforms/dockstore
+logo: ./dockstore.png
 links: 
     homepage: https://dockstore.org
     documentation: https://docs.dockstore.org/en/develop/

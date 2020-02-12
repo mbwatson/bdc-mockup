@@ -1,39 +1,68 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { SEO } from '../components/seo'
-import { usePartnerLogos, usePlatformLogos } from '../hooks'
+import { usePartnerLogos, usePlatforms } from '../hooks'
 import Img from 'gatsby-image'
 import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { ExternalLink } from '../components/link'
 
 // Specify the order in which the logos should appear in each logo cloud
-const logoOrder = {
-    partners: [
-        'renci',
-        'rti-international',
-        'broad-institute',
-        'university-of-california-santa-cruz',
-        'university-of-chicago',
-        'vanderbilt-university-medical-center',
-        'harvard-medical-school',
-        'unc-chapel-hill',
-        'lawrence-berkeley-national-laboratory',
-        'oregon-state-university',
-        'university-of-new-mexico-health-sciences-center',
-        'seven-bridges-genomics-inc',
-        'united-states-department-of-veterans-affairs',
-    ],
-    platforms: [
-        'dockstore',
-        'gen3',
-        'helx',
-        'pic-sure',
-        'seven-bridges-genomics-inc',
-        'terra',
-    ],
+const partners = {
+    'renci': {
+        name: 'RENCI',
+        path: '',
+    },
+    'rti-international': {
+        name: 'RTI International',
+        path: '',
+    },
+    'broad-institute': {
+        name: 'Broad Institute',
+        path: '',
+    },
+    'university-of-california-santa-cruz': {
+        name: 'University of California Santa Cruz',
+        path: '',
+    },
+    'university-of-chicago': {
+        name: 'University of Chicago',
+        path: '',
+    },
+    'vanderbilt-university-medical-center': {
+        name: 'Vanderbilt University Medical Center',
+        path: '',
+    },
+    'harvard-medical-school': {
+        name: 'Harvard Medical School',
+        path: '',
+    },
+    'unc-chapel-hill': {
+        name: 'UNC at Chapel Hill',
+        path: '',
+    },
+    'lawrence-berkeley-national-laboratory': {
+        name: 'Lawrence Berkeley National Laboratory',
+        path: '',
+    },
+    'oregon-state-university': {
+        name: 'Oregon State University',
+        path: '',
+    },
+    'university-of-new-mexico-health-sciences-center': {
+        name: 'University of New Mexico Health Sciences Center',
+        path: '',
+    },
+    'seven-bridges-genomics-inc': {
+        name: 'Seven Bridges Genomics, Inc.',
+        path: '',
+    },
+    'united-states-department-of-veterans-affairs': {
+        name: 'united-states-department-of-veterans-affairs',
+        path: '',
+    },
 }
-
 
 const LogoCloud = styled.div`
     text-align: center;
@@ -54,8 +83,11 @@ const MutedImage = styled(Img)`
 `
 
 const AboutPage = () => {
-    const partnerLogos = usePartnerLogos().sort((a, b) => logoOrder.partners.indexOf(a.name) - logoOrder.partners.indexOf(b.name))
-    const platformLogos = usePlatformLogos().sort((a, b) => logoOrder.platforms.indexOf(a.name) - logoOrder.platforms.indexOf(b.name))
+    const partnerLogos = usePartnerLogos().sort((a, b) => Object.keys(partners).indexOf(a.name) - Object.keys(partners).indexOf(b.name))
+    const platforms = usePlatforms()
+        .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
+    
+    console.table(platforms)
 
     return (
         <PageContent width="95%" maxWidth="1080px" center gutters>
@@ -70,21 +102,27 @@ const AboutPage = () => {
             <Heading>What We are</Heading>
 
             <Paragraph>
-                For research investigators who need to find, access, share, store, cross-link, and compute on large scale data sets, NHLBI BioData Catalyst serves as a cloud-based ecosystem providing tools, applications, and workflows to enable these capabilities in secure workspaces. 
+                For research investigators who need to find, access, share, store, cross-link, and compute on large scale data sets,
+                NHLBI BioData Catalyst serves as a cloud-based ecosystem providing tools, applications, and workflows to enable these capabilities in secure workspaces. 
             </Paragraph>
 
             <Paragraph>
-                NHLBI BioData Catalyst increases access to NHLBI data sets and innovative data analysis capabilities and accelerates efficient biomedical research that drives discovery and scientific advancement, leading to novel diagnostic tools, therapeutic options, and prevention strategies for heart, lung, blood, and sleep disorders.
+                NHLBI BioData Catalyst increases access to NHLBI data sets and innovative data analysis capabilities and accelerates efficient biomedical research
+                that drives discovery and scientific advancement, leading to novel diagnostic tools, therapeutic options, and prevention strategies for heart, lung, blood, and sleep disorders.
             </Paragraph>
 
             <Heading>Who We are</Heading>
             
             <Paragraph>
-                Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor. BioData Catalyst is also building a community of practice working in parallel to collaboratively solve technical challenges.
+                Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor.
+                BioData Catalyst is also building a community of practice working in parallel to collaboratively solve technical challenges.
             </Paragraph>
 
             <Paragraph>
-                The BioData Catalyst ecosystem is funded by a flexible mechanism called Other Transactions (OT). The OT mechanism gives NHLBI considerable flexibility in making and managing awards. This is particularly important for the BioData Catalyst to stay nimble as it approaches the complex tasks involved in the development of this ecosystem under the ever-changing conditions of data science and biomedical science.
+                The BioData Catalyst ecosystem is funded by a flexible mechanism called Other Transactions (OT).
+                The OT mechanism gives NHLBI considerable flexibility in making and managing awards.
+                This is particularly important for the BioData Catalyst to stay nimble as it approaches the complex tasks involved in the development of this ecosystem
+                under the ever-changing conditions of data science and biomedical science.
             </Paragraph>
 
             <Paragraph>
@@ -105,13 +143,14 @@ const AboutPage = () => {
             
             <LogoCloud>
                 {
-                    platformLogos.map(
-                        logo => (
-                            <MutedImage key={ logo.id } fixed={ logo.childImageSharp.fixed } alt={ `${ logo.name.replace('-', ' ') } logo` } />
-                        )
-                    )
+                    platforms.map(platform => (
+                        <Link key={ platform.title } to={ platform.path }>
+                            <MutedImage fixed={ platform.logo.childImageSharp.fixed } alt={ `${ platform.title.replace('-', ' ') } logo` } />
+                        </Link>
+                    ))
                 }
             </LogoCloud>
+
 
             <Heading>How You Can Contribute</Heading>
 

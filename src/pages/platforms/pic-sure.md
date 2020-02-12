@@ -1,6 +1,7 @@
 ---
-title: BioData Catalyst Powered by PIC-SURE
+title: PIC-SURE
 path: /platforms/pic-sure
+logo: ./pic-sure.png
 links: 
     homepage: #
     documentation: #
