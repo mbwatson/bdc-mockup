@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { SEO } from '../../components/seo'
 import { PageContent } from '../../components/layout'
 import { Title, Heading, Paragraph } from '../../components/typography'
@@ -9,37 +10,40 @@ import { ExternalLink } from '../../components/link'
 const DataPage = () => (
     <PageContent width="95%" maxWidth="1080px" center gutters>
         <SEO
-            title="Available Data"
+            title="BioData Catalyst Data Access"
             description=""
             keywords=""
         />
 
-        <Title>Data</Title>
+        <Title>Data Access on BioData Catalyst</Title>
         
-        <Heading>How data works on BioData Catalyst</Heading>
-
         <Paragraph>
             BioData Catalyst hosts a number of controlled datasets from the <ExternalLink to="https://www.nhlbiwgs.org/">Trans-omics for Precision Medicine</ExternalLink> (TOPMed) initiative.
-            These datasets are stored in Amazon Web Services and Google Cloud storage buckets operated by NHLBI such that the BioData Catalyst ecosystem enables users to access the same copy of the data.
+            These datasets are stored in Amazon Web Services and Google Cloud storage buckets operated by NHLBI such that
+            the BioData Catalyst ecosystem enables users to access the same copy of the data.
             Access to these hosted datasets is controlled programmatically by services within the BioData Catalyst ecosystem for user authentication and authorization.
             Users log into BioData Catalyst platforms using their eRA Commons credentials and authentication is performed by iTrust.
         </Paragraph>
 
         <Paragraph>
-            The BioData Catalyst ecosystem manages user access to the hosted controlled data using data access approvals from the NIH Database of Genotypes and Phenotypes (dbGaP).
+            The BioData Catalyst ecosystem manages user access to the hosted controlled data using data access approvals from the <ExternalLink to="https://www.ncbi.nlm.nih.gov/gap/">NIH Database of Genotypes and Phenotypes</ExternalLink> (dbGaP).
             Therefore, users who want to access one or more of the hosted controlled studies on the ecosystem must be approved for access to that study in dbGaP.
             Principal Investigators who have approved Data Access Requests (DARs) on dbGaP for the BioData Catalyst datasets will be able to programmatically access those data on the platforms and services within the BioData Catalyst ecosystem.
         </Paragraph>
 
         <Paragraph>
-            Principal Investigators with an approved DAR can enable their lab staff to access the hosted datasets on the BioData Catalyst ecosystem by giving the lab staff "designated downloader status" on dbGaP.
+            Principal Investigators with an approved DAR can enable their lab staff to access the hosted datasets on the BioData Catalyst ecosystem
+            by giving the lab staff "designated downloader status" on dbGaP.
             These individuals must:
         </Paragraph>
 
         <BulletedList dense>
-            <ListItem primary={ <span>Have an eRA commons account or an NIH username and password.
-                <ExternalLink to="https://era.nih.gov/commons/#Commons/1_Admin/mgacct_create.htm%3FTocPath%3D_____24">Please see these instructions</ExternalLink>.</span> } />
-            <ListItem primary="Log in to dbGaP at least once" />
+            <ListItem primary={
+                <span>Have an eRA commons account or an NIH username and password.
+                    (<ExternalLink to="https://era.nih.gov/commons/#Commons/1_Admin/mgacct_create.htm%3FTocPath%3D_____24">Please see these instructions</ExternalLink>.); and
+                </span>
+            } />
+            <ListItem primary="Log in to dbGaP at least once." />
         </BulletedList>
 
         <Paragraph>
@@ -54,11 +58,13 @@ const DataPage = () => (
         </Paragraph>
 
         <Paragraph>
-            Please note that researchers also have the option to bring their own datasets to the BioData Catalyst platforms.
+            Please note, too, that researchers also have the option to bring their own datasets to the BioData Catalyst platforms.
             Both BioData Catalyst powered by Seven Bridges and BioData Catalyst powered by Terra enable users to bring their own data directly to a workspace for analysis.
             As described in the <ExternalLink to="#">BioData Catalyst Data Use Policy</ExternalLink>, users can upload data for which they have the appropriate approvals
             provided that they do not violate the terms of their Data Use Agreements, Limitations, or Institutional Review Board policies and guidelines.
-            To learn more about how to bring your own data to BioData Catalyst, please refer to the documentation for Seven Bridges and Terra.
+            To learn more about how to bring your own data to BioData Catalyst, please refer to the documentation
+            for <ExternalLink to="https://f4c.readme.io/docs/upload-to-f4c">Seven Bridges</ExternalLink>{' '}
+            and <ExternalLink to="https://support.terra.bio/hc/en-us/articles/360024056512-Uploading-to-a-workspace-Google-bucket">Terra</ExternalLink>.
         </Paragraph>
         
         <Heading>Check my Data Access</Heading>
@@ -71,11 +77,23 @@ const DataPage = () => (
             <ExternalButtonLink to="https://gen3.datastage.io/user/oauth2/authorize?idp=fence&client_id=xMhuXjGdk9zpzdJjufEinh3nKzOUKOTFZcwzU5xT&redirect_uri=https%3A%2F%2Fbdc-mockup.netlify.com&response_type=id_token+token&scope=openid+user&nonce=2bfe151af238d21f48d818bf8bbec408838c8dc0ace6b4c5621ac9dfa157798b">Check my Access</ExternalButtonLink>
         </Paragraph>
 
-        <Heading>Want More Data?</Heading>
+        <Heading>Troubleshooting Data Access</Heading>
+        
+        <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique minus at, repudiandae est incidunt ea nulla reiciendis eveniet quibusdam velit. Iusto quo, suscipit.
+        </Paragraph>
+
+        <Heading>Data Access FAQs</Heading>
 
         <Paragraph>
-            More data is available through <ExternalLink ti="https://dbgap.ncbi.nlm.nih.gov">dbGap</ExternalLink>.
-            Visit dbGAP and submit a Data Access Request (DAR).
+            We may have an answer to your question already! Please consult our <Link to="/faqs">FAQs</Link> to find out.
+        </Paragraph>
+        
+        <Heading>Want <em>More</em> Data?</Heading>
+
+        <Paragraph>
+            More data is available through <ExternalLink to="https://dbgap.ncbi.nlm.nih.gov">dbGap</ExternalLink>.
+            Visit dbGAP and submit a DAR.
         </Paragraph>
 
         <Paragraph>
