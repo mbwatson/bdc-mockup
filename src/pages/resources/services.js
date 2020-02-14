@@ -16,8 +16,8 @@ const services = [
             {
                 platform: 'Gen3',
                 description: `
-                    Use this platform to discover and learn more about variables in TOPMed projects and to apply for access through dbGaP.
-                    Gen3 also allows for search through hosted data and for creating synthetic cohorts of interest and exporting the data to an analysis environment.
+                    Users can explore and search over harmonized TOPMed variables and select value ranges, as well as request access to dbGaP studies.
+                    Gen3 also allows users to search over project- and study-specific genomic and phenotypic files broken down by consent groups, and export the selected cohorts to analytical workspaces. 
                 `,
                 links: {
                     launch: 'https://gen3.datastage.io/',
@@ -45,8 +45,7 @@ const services = [
             {
                 platform: 'Seven Bridges',
                 description: `
-                    With this platform users can utilize collaborative workspaces for analyzing genomics data at scale.
-                    Access hosted datasets along with Common Workflow Language pipelines for analysis.
+                    Utilize collaborative workspaces for analyzing genomics data at scale. Access hosted datasets along with Common Workflow Language (CWL) and GENESIS R package pipelines for analysis.
                     This platform also enables users to bring their own data for analysis and work in RStudio and Jupyterlab Notebooks for interactive analysis.
                 `,
                 links: {
@@ -58,8 +57,8 @@ const services = [
             {
                 platform: 'Terra',
                 description: `
-                    This scalable cloud-based platform can be used for democratizing genomic data access and for sharing and computing across large genomic and genomic-related data sets.
-                    Terra offers a stand-alone computational workspace model that provides a secure collaborative place to organize data, run and monitor analysis pipelines, and perform interactive analysis using applications such as Jupyter Notebooks.
+                    Share and compute across large genomic and genomic-related data sets.
+                    Terra offers a stand-alone computational workspace model that provides a secure collaborative place to organize data, run and monitor Workflow Description Language (WDL) analysis pipelines, and perform interactive analysis using applications such as Jupyter Notebooks and the Hail GWAS tool.
                 `,
                 links: {
                     launch: 'https://datastage.terra.bio/',
@@ -75,7 +74,7 @@ const services = [
             {
                 platform: 'Dockstore',
                 description: `
-                    Via Dockstore, users can search from a catalogue of high-quality Docker-based workflows that easily export to platforms such as Terra or Seven Bridges.
+                    Search from a catalog of high-quality Docker-based workflows that export to Terra or Seven Bridges.
                     Explore organization pages to find collections of workflows from labs, institutions, and consortiums or create a page to share your work with the wider bioinformatics community.
                 `,
                 links: {
