@@ -1,7 +1,7 @@
 ---
 title: HeLx
 path: /platforms/helx
-logo: ./helx.png
+logo: ../../images/logos/platforms/helx.png
 links: 
     homepage: https://helx.commonsshare.org
     documentation: https://helx.commonsshare.org

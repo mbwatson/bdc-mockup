@@ -1,7 +1,7 @@
 ---
 title: Seven Bridges
 path: /platforms/seven-bridges
-logo: ./seven-bridges.png
+logo: ../../images/logos/platforms/seven-bridges.png
 links: 
     homepage: https://f4c.readme.io
     documentation: https://f4c.readme.io/docs

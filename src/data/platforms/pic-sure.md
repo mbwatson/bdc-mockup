@@ -1,7 +1,7 @@
 ---
 title: PIC-SURE
 path: /platforms/pic-sure
-logo: ./pic-sure.png
+logo: ../../images/logos/platforms/pic-sure.png
 links: 
     homepage: #
     documentation: #

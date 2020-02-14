@@ -29,10 +29,6 @@ export const menuItems = [
             },
         ],
     },
-    // {
-    //     text: 'FAQ',
-    //     path: '/faq',
-    // },
     {
         text: 'Contact',
         path: '/contact',

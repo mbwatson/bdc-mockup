@@ -32,13 +32,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `platform-pages`,
-        path: `${ __dirname }/src/pages/platforms`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `images`,
         path: `${ __dirname }/src/images`,
       },

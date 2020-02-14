@@ -1,7 +1,7 @@
 ---
 title: Dockstore
 path: /platforms/dockstore
-logo: ./dockstore.png
+logo: ../../images/logos/platforms/dockstore.png
 links: 
     homepage: https://dockstore.org
     documentation: https://docs.dockstore.org/en/develop/

@@ -1,7 +1,7 @@
 ---
 title: Gen3
 path: /platforms/gen3
-logo: ./gen3.png
+logo: ../../images/logos/platforms/gen3.png
 links: 
     homepage: https://gen3.org
     documentation: https://gen3.org/get-started/

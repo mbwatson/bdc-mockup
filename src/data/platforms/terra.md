@@ -1,7 +1,7 @@
 ---
 title: Terra
 path: /platforms/terra
-logo: ./terra.png
+logo: ../../images/logos/platforms/terra.png
 links: 
     homepage: https://terra.bio
     documentation: https://support.terra.bio/hc/en-us/categories/360002177552
