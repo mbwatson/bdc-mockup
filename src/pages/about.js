@@ -2,67 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { SEO } from '../components/seo'
-import { usePartnerLogos, usePlatforms } from '../hooks'
+import { usePartners, usePlatforms } from '../hooks'
 import Img from 'gatsby-image'
 import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { ExternalLink } from '../components/link'
-
-// Specify the order in which the logos should appear in each logo cloud
-const partners = {
-    'renci': {
-        name: 'Renaissance Computing Institute',
-        path: '',
-    },
-    'rti-international': {
-        name: 'RTI International',
-        path: '',
-    },
-    'broad-institute': {
-        name: 'Broad Institute',
-        path: '',
-    },
-    'university-of-california-santa-cruz': {
-        name: 'University of California Santa Cruz',
-        path: '',
-    },
-    'university-of-chicago': {
-        name: 'University of Chicago',
-        path: '',
-    },
-    'vanderbilt-university-medical-center': {
-        name: 'Vanderbilt University Medical Center',
-        path: '',
-    },
-    'harvard-medical-school': {
-        name: 'Harvard Medical School',
-        path: '',
-    },
-    'unc-chapel-hill': {
-        name: 'UNC at Chapel Hill',
-        path: '',
-    },
-    'lawrence-berkeley-national-laboratory': {
-        name: 'Lawrence Berkeley National Laboratory',
-        path: '',
-    },
-    'oregon-state-university': {
-        name: 'Oregon State University',
-        path: '',
-    },
-    'university-of-new-mexico-health-sciences-center': {
-        name: 'University of New Mexico Health Sciences Center',
-        path: '',
-    },
-    'seven-bridges-genomics-inc': {
-        name: 'Seven Bridges Genomics, Inc.',
-        path: '',
-    },
-    'united-states-department-of-veterans-affairs': {
-        name: 'united-states-department-of-veterans-affairs',
-        path: '',
-    },
-}
 
 const LogoCloud = styled.div`
     text-align: center;
@@ -83,7 +27,7 @@ const MutedImage = styled(Img)`
 `
 
 const AboutPage = () => {
-    const partnerLogos = usePartnerLogos().sort((a, b) => Object.keys(partners).indexOf(a.name) - Object.keys(partners).indexOf(b.name))
+    const partners = usePartners()
     const platforms = usePlatforms()
         .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
     
@@ -131,9 +75,9 @@ const AboutPage = () => {
             
             <LogoCloud>
                 {
-                    partnerLogos.map(
-                        logo => (
-                            <MutedImage key={ logo.id } fixed={ logo.childImageSharp.fixed } alt={ `${ logo.name.replace('-', ' ') } logo` } />
+                    partners.map(
+                        partner => (
+                            <MutedImage key={ partner.image.id } fixed={ partner.image.childImageSharp.fixed } alt={ `${ partner.name } logo` } />
                         )
                     )
                 }
