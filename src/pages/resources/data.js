@@ -27,6 +27,8 @@ const DataPage = ({ data }) => {
                 Access to these hosted datasets is controlled programmatically by services within the BioData Catalyst ecosystem for user authentication and authorization.
                 Users log into BioData Catalyst platforms using their eRA Commons credentials and authentication is performed by iTrust.
             </Paragraph>
+            
+            <br/>
 
             <Heading>Check your data access</Heading>
 
@@ -38,6 +40,8 @@ const DataPage = ({ data }) => {
                 <ExternalButtonLink to="https://gen3.datastage.io/user/oauth2/authorize?idp=fence&client_id=xMhuXjGdk9zpzdJjufEinh3nKzOUKOTFZcwzU5xT&redirect_uri=https%3A%2F%2Fbdc-mockup.netlify.com&response_type=id_token+token&scope=openid+user&nonce=2bfe151af238d21f48d818bf8bbec408838c8dc0ace6b4c5621ac9dfa157798b">Check my Access</ExternalButtonLink>
             </Paragraph>
 
+            <br/>
+
             <Heading>How data access works on BioData Catalyst</Heading>
 
             <Paragraph>
@@ -46,7 +50,9 @@ const DataPage = ({ data }) => {
             </Paragraph>
             
             <Img style={{ width: '90%', margin: 'auto' }} fluid={ dataBucketsGraphic.childImageSharp.fluid } />
-
+            
+            <br/>
+            
             <Subheading>Data access highlights</Subheading>
 
             <BulletedList>

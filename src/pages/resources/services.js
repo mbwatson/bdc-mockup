@@ -168,7 +168,9 @@ const ServicesPage = ({ data }) => {
             </Paragraph>
             
             <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
-
+            
+            <br/>
+            
             <Heading>What do you want to do today?</Heading>
 
             {

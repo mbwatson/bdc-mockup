@@ -18,7 +18,9 @@ const ByodPage = () => (
             To support flexibility and analysis, we allow researchers to bring their own data and workflows into the ecosystem.
             Researchers can bring their own datasets into BioData Catalyst powered by Seven Bridges and BioData Catalyst powered by Terra.
         </Paragraph>
-
+        
+        <br/>
+        
         <Heading>Build on your existing work</Heading>
 
         <Paragraph>
@@ -30,9 +32,13 @@ const ByodPage = () => (
             provided that they do not violate the terms of their Data Use Agreements, Limitations, or Institutional Review Board policies and guidelines.
         </Paragraph>
 
+        <br/>
+
         <Paragraph center>
             <ExternalButtonLink to="https://f4c.readme.io/docs/upload-to-f4c">BYOD to BioDataCatalyst powered by Seven Bridges</ExternalButtonLink>
         </Paragraph>
+        
+        <br/>
 
         <Paragraph center>
             <ExternalButtonLink to="https://support.terra.bio/hc/en-us/articles/360024056512-Uploading-to-a-workspace-Google-bucket">BYOD to BioDataCatalyst powered by Terra</ExternalButtonLink>
