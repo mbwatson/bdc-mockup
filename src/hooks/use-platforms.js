@@ -10,9 +10,12 @@ const platformsQuery = graphql`
                         path
                         links {
                             homepage
+                            launch
                             documentation
+                            learn
                         }
                         teaser
+                        service
                         logo {
                             id
                             childImageSharp {

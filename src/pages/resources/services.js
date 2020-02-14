@@ -8,6 +8,7 @@ import { Title, Heading, Paragraph } from '../../components/typography'
 import { Card, CardHeader, CardBody } from '../../components/card'
 import { Container as Grid, Row, Col, Visible } from 'react-grid-system'
 import { ExternalLink } from '../../components/link'
+import { usePlatforms } from '../../hooks'
 
 const services = [
     {
@@ -147,6 +148,34 @@ const Separator = styled.div`
 
 const ServicesPage = ({ data }) => {
     const { platformsAndServicesGraphic } = data
+    const platforms = usePlatforms()
+    
+    console.log(platforms)
+    const services = [
+        {
+            cardTitle: 'Explore Available Data',
+            cardItems: [
+                platforms.find(platform => platform.frontmatter.title === 'Gen3'),
+                platforms.find(platform => platform.frontmatter.title === 'PIC-SURE'),
+            ]
+        },
+        {
+            cardTitle: 'Analyze Data in Cloud-based Shared Workspaces',
+            cardItems: [
+                platforms.find(platform => platform.frontmatter.title === 'Seven Bridges'),
+                platforms.find(platform => platform.frontmatter.title === 'Terra'),
+            ]
+        },
+        {
+            cardTitle: 'Use Community Tools on Controlled-access Datasets',
+            cardItems: [
+                platforms.find(platform => platform.frontmatter.title === 'Dockstore'),
+                platforms.find(platform => platform.frontmatter.title === 'HeLx'),
+            ]
+        },
+    ]
+
+    console.log(services)
 
     return (
         <PageContent width="95%" maxWidth="1080px" center gutters>
@@ -180,23 +209,23 @@ const ServicesPage = ({ data }) => {
                             <Grid fluid>
                                 <Row gutterWidth={ 0 }>
                                     {
-                                        service.cardItems.map((item, i) => (
+                                        service.cardItems.map((platform, i) => (
                                             <Fragment key={ i }>
                                                 <Col xs={ 12 } md={ 5 } style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                                                    <h3 style={{ textAlign: 'center' }}>BioData Catalyst powered by { item.platform }</h3>
+                                                    <h3 style={{ textAlign: 'center' }}>BioData Catalyst powered by { platform.frontmatter.title }</h3>
                                                     <Paragraph>
-                                                        { item.description }
+                                                        { platform.frontmatter.service }
                                                     </Paragraph>
                                                     <ToolLinks>
-                                                        <ExternalToolLink to={ item.links.launch }>Launch</ExternalToolLink>
+                                                        <ExternalToolLink to={ platform.frontmatter.links.launch }>Launch</ExternalToolLink>
                                                         | 
-                                                        <ExternalToolLink to={ item.links.documentation }>Documentation</ExternalToolLink>
+                                                        <ExternalToolLink to={ platform.frontmatter.links.documentation }>Documentation</ExternalToolLink>
                                                         | 
-                                                        <InternalToolLink to={ item.links.learnMore }>Learn More</InternalToolLink>
+                                                        <InternalToolLink to={ platform.frontmatter.links.learn }>Learn More</InternalToolLink>
                                                     </ToolLinks>
                                                 </Col>
                                                 {
-                                                    i + 1 < service.cardItems.length&& (
+                                                    i + 1 < service.cardItems.length && (
                                                         <Fragment>
                                                             <Visible md lg xl>
                                                                 <Col md={ 2 }>

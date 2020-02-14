@@ -3,9 +3,12 @@ title: PIC-SURE
 path: /platforms/pic-sure
 logo: ../../images/logos/platforms/pic-sure.png
 links: 
-    homepage: #
+    homepage: https://pic-sure.org/
+    launch: https://biodatacatalyst.integration.hms.harvard.edu/psamaui/login/?redirection_url=/picsureui/
     documentation: #
+    learn: /platforms/pic-sure
 teaser: The Patient Information Commons Standard Unification of Research Elements (PIC-SURE) User Interface allows for an investigator to search available data and conduct feasibility queries, allowing for cohorts to be built in real-time and results to be exported via the PIC-SURE API for analysis. 
+service: Explore available data through BioData Catalyst powered by PIC-SURE with interactive search and visualizations for feasibility assessment. Use query results to create a cohort, with the ability to choose specific variables of interest to export into an analysis environment.
 ---
 
 - Search ALL phenotypic data by typing terms directly in the search bar to find variables of interest across all available studies 

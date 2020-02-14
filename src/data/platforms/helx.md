@@ -4,8 +4,11 @@ path: /platforms/helx
 logo: ../../images/logos/platforms/helx.png
 links: 
     homepage: https://helx.commonsshare.org
-    documentation: https://helx.commonsshare.org
+    launch: https://helx.commonsshare.org
+    documentation: #
+    learn: /platforms/helx
 teaser: HeLx is a web based platform for collaborative open science. It provides metadata-aware data management capabilities with extensive support for sharing and access control. The AppStore also presents tools that can be dynamically launched for each user.
+service: HeLx is a web-based platform for collaborative open science. It provides metadata aware data management capabilities with extensive support for sharing and access control. The AppStore also presents tools that can be dynamically launched for each user.
 ---
 - Share your data and workflows with colleagues 
 - Manage who has access to the content that you share 
