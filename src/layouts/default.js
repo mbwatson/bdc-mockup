@@ -86,7 +86,7 @@ export const DefaultLayout = ({ children }) => {
                                 <Paragraph center={ isCompact } left={ !isCompact }>
                                     BioData Catalyst is a product of the National Heart, Lung, and Blood Institute of the National Institutes of Health.
                                     <LineBreak count={ 2 } />
-                                    For general inquiries, email [NHLBI email redirects to <a href="mailto:bdc3@renci.org">bdc3@renci.org</a>].
+                                    For general inquiries, email <a href="biodatacatalyst@nhlbi.nih.org">biodatacatalyst@nhlbi.nih.org</a>.
                                     <LineBreak count={ 2 } />
                                     &copy; { new Date().getFullYear() }
                                 </Paragraph>

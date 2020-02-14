@@ -28,7 +28,7 @@ const FaqPage = () => {
                 keywords=""
             />
         
-            <Title>Frequently Asked Questions</Title>
+            <Title>Frequently asked questions</Title>
 
             <Paragraph>
                 This page includes collections of answers to our most Frequently Asked Questions. 

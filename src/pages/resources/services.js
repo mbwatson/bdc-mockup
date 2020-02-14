@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { SEO } from '../../components/seo'
-import { PageContent } from '../../components/layout'
+import { Container, PageContent } from '../../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../../components/typography'
 import { Card, CardHeader, CardBody } from '../../components/card'
 import { Container as Grid, Row, Col, Visible } from 'react-grid-system'
@@ -145,76 +146,94 @@ const Separator = styled.div`
     }
 `
 
-const ServicesPage = () => (
-    <PageContent width="95%" maxWidth="1080px" center gutters>
-        <SEO
-            title="Platforms & Services"
-            description=""
-            keywords=""
-        />
+const ServicesPage = ({ data }) => {
+    const { platformsAndServicesGraphic } = data
 
-        <Title>Platforms & Services</Title>
+    return (
+        <PageContent width="95%" maxWidth="1080px" center gutters>
+            <SEO
+                title="Platforms & Services"
+                description=""
+                keywords=""
+            />
 
-        <Heading>Explore the BioData Catalyst Ecosystem</Heading>
-        
-        <Paragraph>
-            For academic heart, lung, blood, and sleep researchers (with access to TOPMed data and capacity to analyze it),
-            the BioData Catalyst ecosystem provides researchers with several platforms and services
-            for exploring and analyzing both private and publicly hosted datasets in the cloud using pre-built and custom workflows.
-        </Paragraph>
+            <Title>Platforms and services</Title>
 
-        <Heading>What do you want to do today?</Heading>
+            <Heading>Explore the BioData Catalyst ecosystem</Heading>
+            
+            <Paragraph>
+                For academic heart, lung, blood, and sleep researchers (with access to TOPMed data and capacity to analyze it),
+                the BioData Catalyst ecosystem provides researchers with several platforms and services
+                for exploring and analyzing both private and publicly hosted datasets in the cloud using pre-built and custom workflows.
+            </Paragraph>
+            
+            <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
 
-        {
-            services.map(service => (
-                <Card key={ service.cardTitle }>
-                    <CardHeader>{ service.cardTitle }</CardHeader>
-                    <CardBody>
-                        <Grid fluid>
-                            <Row gutterWidth={ 0 }>
-                                {
-                                    service.cardItems.map((item, i) => (
-                                        <Fragment key={ i }>
-                                            <Col xs={ 12 } md={ 5 } style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                                                <h3 style={{ textAlign: 'center' }}>BioData Catalyst powered by { item.platform }</h3>
-                                                <Paragraph>
-                                                    { item.description }
-                                                </Paragraph>
-                                                <ToolLinks>
-                                                    <ExternalToolLink to={ item.links.launch }>Launch</ExternalToolLink>
-                                                    | 
-                                                    <ExternalToolLink to={ item.links.documentation }>Documentation</ExternalToolLink>
-                                                    | 
-                                                    <InternalToolLink to={ item.links.learnMore }>Learn More</InternalToolLink>
-                                                </ToolLinks>
-                                            </Col>
-                                            {
-                                                i + 1 < service.cardItems.length&& (
-                                                    <Fragment>
-                                                        <Visible md lg xl>
-                                                            <Col md={ 2 }>
-                                                                <Separator vertical />
-                                                            </Col>
-                                                        </Visible>
-                                                        <Visible xs sm>
-                                                            <Col xs={ 12 }>
-                                                                <Separator horizontal />
-                                                            </Col>
-                                                        </Visible>                                                
-                                                    </Fragment>
-                                                )
-                                            }
-                                        </Fragment>
-                                    ))
-                                }
-                            </Row>
-                        </Grid>
-                    </CardBody>
-                </Card>
-            ))
-        }
+            <Heading>What do you want to do today?</Heading>
 
-    </PageContent>
-)
+            {
+                services.map(service => (
+                    <Card key={ service.cardTitle }>
+                        <CardHeader>{ service.cardTitle }</CardHeader>
+                        <CardBody>
+                            <Grid fluid>
+                                <Row gutterWidth={ 0 }>
+                                    {
+                                        service.cardItems.map((item, i) => (
+                                            <Fragment key={ i }>
+                                                <Col xs={ 12 } md={ 5 } style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                                                    <h3 style={{ textAlign: 'center' }}>BioData Catalyst powered by { item.platform }</h3>
+                                                    <Paragraph>
+                                                        { item.description }
+                                                    </Paragraph>
+                                                    <ToolLinks>
+                                                        <ExternalToolLink to={ item.links.launch }>Launch</ExternalToolLink>
+                                                        | 
+                                                        <ExternalToolLink to={ item.links.documentation }>Documentation</ExternalToolLink>
+                                                        | 
+                                                        <InternalToolLink to={ item.links.learnMore }>Learn More</InternalToolLink>
+                                                    </ToolLinks>
+                                                </Col>
+                                                {
+                                                    i + 1 < service.cardItems.length&& (
+                                                        <Fragment>
+                                                            <Visible md lg xl>
+                                                                <Col md={ 2 }>
+                                                                    <Separator vertical />
+                                                                </Col>
+                                                            </Visible>
+                                                            <Visible xs sm>
+                                                                <Col xs={ 12 }>
+                                                                    <Separator horizontal />
+                                                                </Col>
+                                                            </Visible>                                                
+                                                        </Fragment>
+                                                    )
+                                                }
+                                            </Fragment>
+                                        ))
+                                    }
+                                </Row>
+                            </Grid>
+                        </CardBody>
+                    </Card>
+                ))
+            }
+
+        </PageContent>
+    )
+}
 
 export default ServicesPage
+
+export const query = graphql`
+    {
+        platformsAndServicesGraphic: file(relativePath: {eq: "platforms-and-services.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`

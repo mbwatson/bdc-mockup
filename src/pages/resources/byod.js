@@ -12,15 +12,14 @@ const ByodPage = () => (
             keywords=""
         />
 
-        <Title>Bring Your Own Data</Title>
+        <Title>Bring your own data</Title>
         
         <Paragraph>
-            The BioData Catalyst ecosystem exists to make work easier for researchers.
-            Sometimes, the best way to do that is to let researchers bring their own data and workflows into the ecosystem to build their analysis further rather than starting over.
-            This is why we are actively building the ability to bring your own data into our ecosystem.
+            To support flexibility and analysis, we allow researchers to bring their own data and workflows into the ecosystem.
+            Researchers can bring their own datasets into BioData Catalyst powered by Seven Bridges and BioData Catalyst powered by Terra.
         </Paragraph>
 
-        <Heading>Build on your Existing Work</Heading>
+        <Heading>Build on your existing work</Heading>
 
         <Paragraph>
             Currently, researchers can bring their own datasets into the BioData Catalyst powered by Seven Bridges and BioData Catalyst powered by Terra.

@@ -12,9 +12,9 @@ const LegalPage = () => (
             keywords=""
         />
 
-        <Title>Legal Information</Title>
+        <Title>Legal information</Title>
         
-        <Heading>NHLBI BioData Catalyst Cloud Use Statement</Heading>
+        <Heading>NHLBI BioData Catalyst cloud use statement</Heading>
 
         <Paragraph>
             The NHLBI BioData Catalyst Ecosystem will employ Amazon Web Services and Google Cloud Platform for data storage and compute.

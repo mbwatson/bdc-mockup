@@ -11,7 +11,7 @@ import { ExternalLink } from '../components/link'
 // Specify the order in which the logos should appear in each logo cloud
 const partners = {
     'renci': {
-        name: 'RENCI',
+        name: 'Renaissance Computing Institute',
         path: '',
     },
     'rti-international': {
@@ -99,7 +99,7 @@ const AboutPage = () => {
         
             <Title>About BioData Catalyst</Title>
 
-            <Heading>What We are</Heading>
+            <Heading>What we are</Heading>
 
             <Paragraph>
                 For research investigators who need to find, access, share, store, cross-link, and compute on large scale data sets,
@@ -111,7 +111,7 @@ const AboutPage = () => {
                 that drives discovery and scientific advancement, leading to novel diagnostic tools, therapeutic options, and prevention strategies for heart, lung, blood, and sleep disorders.
             </Paragraph>
 
-            <Heading>Who We are</Heading>
+            <Heading>Who we are</Heading>
             
             <Paragraph>
                 Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor.
@@ -139,7 +139,7 @@ const AboutPage = () => {
                 }
             </LogoCloud>
 
-            <Heading>Partners Powering our Ecosystem</Heading>
+            <Heading>Partners powering our ecosystem</Heading>
             
             <LogoCloud>
                 {
@@ -152,7 +152,7 @@ const AboutPage = () => {
             </LogoCloud>
 
 
-            <Heading>How You Can Contribute</Heading>
+            <Heading>How you can contribute</Heading>
 
             <Paragraph>
                 BioData Catalyst is a dynamic resource that will be continually developed and refined.

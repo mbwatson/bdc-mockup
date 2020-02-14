@@ -13,20 +13,20 @@ const WAIT_TIME = process.env.NODE_ENV === 'production' ? 5 * 1000 : 1 * 1000
 const carouselItems = [
     {
         key: 0,
-        headline: 'We have so much data!',
-        description: 'Take control of your data with customizable tools and workflows',
+        headline: 'Advancing access to TOPMed data',
+        description: 'BioData Catalyst provides one point of entry to the most TOPMed datasets, including Freeze 5b data.',
         data: [
-            { name: 'Participants', value: 54854 },
-            { name: 'Whole Genome Sequences', value: 3216 },
-            { name: 'Petabytes of Data', value: 3 },
+            { name: 'Participants', value: '54,854' },
+            { name: 'Whole Genome Sequences', value: '3,216' },
+            { name: 'Petabytes of Data', value: '3' },
         ],
     },
     {
         key: 1,
-        headline: 'Diverse data is a first-class priority',
-        description: 'BioData catalyst provides more diverse population data than any other resource',
+        headline: 'Prioritizing diverse data',
+        description: 'BioData catalyst provides a more diverse population data than any other resource.',
         data: [
-            { name: 'Phenotypes', value: 999 },
+            { name: 'Participants with phenotypes', value: '241,956' },
             { name: 'Interesting Value', value: 42 },
         ],
     }
