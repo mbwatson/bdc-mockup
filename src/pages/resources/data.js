@@ -4,7 +4,7 @@ import { SEO } from '../../components/seo'
 import { PageContent } from '../../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../../components/typography'
 import { BulletedList, ListItem } from '../../components/list'
-import { ExternalButtonLink } from '../../components/buttons'
+import { ButtonExternalLink } from '../../components/buttons'
 import { ExternalLink } from '../../components/link'
 
 const DataPage = ({ data }) => {
@@ -37,7 +37,7 @@ const DataPage = ({ data }) => {
             </Paragraph>
 
             <Paragraph center>
-                <ExternalButtonLink to="https://gen3.datastage.io/user/oauth2/authorize?idp=fence&client_id=xMhuXjGdk9zpzdJjufEinh3nKzOUKOTFZcwzU5xT&redirect_uri=https%3A%2F%2Fbdc-mockup.netlify.com&response_type=id_token+token&scope=openid+user&nonce=2bfe151af238d21f48d818bf8bbec408838c8dc0ace6b4c5621ac9dfa157798b">Check my Access</ExternalButtonLink>
+                <ButtonExternalLink to="https://gen3.datastage.io/user/oauth2/authorize?idp=fence&client_id=xMhuXjGdk9zpzdJjufEinh3nKzOUKOTFZcwzU5xT&redirect_uri=https%3A%2F%2Fbdc-mockup.netlify.com&response_type=id_token+token&scope=openid+user&nonce=2bfe151af238d21f48d818bf8bbec408838c8dc0ace6b4c5621ac9dfa157798b">Check my Access</ButtonExternalLink>
             </Paragraph>
 
             <br/>
