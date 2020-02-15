@@ -24,11 +24,7 @@ const ByodPage = () => (
         <Heading>Build on your existing work</Heading>
 
         <Paragraph>
-            Currently, researchers can bring their own datasets into the BioData Catalyst powered by Seven Bridges and BioData Catalyst powered by Terra.
-        </Paragraph>
-
-        <Paragraph>
-            As described in the BioData Catalyst Data Use Policy <em>[insert link once we have the policy]</em>, users can upload data for which they have the appropriate approval,
+            As described in the BioData Catalyst Data Use Policy, users can upload data for which they have the appropriate approval,
             provided that they do not violate the terms of their Data Use Agreements, Limitations, or Institutional Review Board policies and guidelines.
         </Paragraph>
 
