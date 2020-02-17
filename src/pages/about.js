@@ -83,7 +83,7 @@ const AboutPage = () => {
                 }
             </LogoCloud>
 
-            <Heading>Partners powering our ecosystem</Heading>
+            <Heading>Platforms powering our ecosystem</Heading>
             
             <LogoCloud>
                 {
