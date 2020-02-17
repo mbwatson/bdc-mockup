@@ -6,7 +6,6 @@ links:
     homepage: https://gen3.org
     launch: https://gen3.datastage.io/
     documentation: https://gen3.org/get-started/
-    learn: /platforms/gen3
 teaser: The Gen3 software stack is a collection of microservices that enable the standing-up of data commons, which allows different partner organizations to pool data and grants-approved researchers access to harmonized datasets in a scalable, reproducible, and secure manner.
 service: The Gen3 platform lets users search and filter over harmonized TOPMed variables and their value ranges, and export the selected cohorts to analytical workspaces. Gen3 also allows users to search over study-specific genomic and phenotypic data files broken down by consent groups, and discover new studies to apply for access through dbGaP.
 ---

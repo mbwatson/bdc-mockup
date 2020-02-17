@@ -12,7 +12,6 @@ const platformsQuery = graphql`
                             homepage
                             launch
                             documentation
-                            learn
                         }
                         teaser
                         service

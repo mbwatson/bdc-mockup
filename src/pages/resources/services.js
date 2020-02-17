@@ -131,7 +131,7 @@ const ServicesPage = ({ data }) => {
                                                         | 
                                                         <ExternalToolLink to={ platform.frontmatter.links.documentation }>Documentation</ExternalToolLink>
                                                         | 
-                                                        <InternalToolLink to={ platform.frontmatter.links.learn }>Learn More</InternalToolLink>
+                                                        <InternalToolLink to={ platform.frontmatter.path }>Learn More</InternalToolLink>
                                                     </ToolLinks>
                                                 </Col>
                                                 {
