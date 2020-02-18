@@ -43,7 +43,7 @@ const AboutPage = () => {
         
             <Title>About BioData Catalyst</Title>
 
-            <Heading>What we are</Heading>
+            <Heading>What We Are</Heading>
 
             <Paragraph>
                 For research investigators who need to find, access, share, store, cross-link, and compute on large scale data sets,
@@ -55,7 +55,7 @@ const AboutPage = () => {
                 that drives discovery and scientific advancement, leading to novel diagnostic tools, therapeutic options, and prevention strategies for heart, lung, blood, and sleep disorders.
             </Paragraph>
 
-            <Heading>Who we are</Heading>
+            <Heading>Who We Are</Heading>
             
             <Paragraph>
                 Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor.
@@ -63,14 +63,14 @@ const AboutPage = () => {
             </Paragraph>
 
             <Paragraph>
-                The BioData Catalyst ecosystem is funded by a flexible mechanism called Other Transactions (OT).
+                The BioData Catalyst ecosystem is funded by the National Heart, Lung, and Blood Institute (NHLBI) through a flexible mechanism called Other Transactions (OT).
                 The OT mechanism gives NHLBI considerable flexibility in making and managing awards.
                 This is particularly important for the BioData Catalyst to stay nimble as it approaches the complex tasks involved in the development of this ecosystem
                 under the ever-changing conditions of data science and biomedical science.
             </Paragraph>
 
             <Paragraph>
-                Currently, researchers and other professionals from the following institutions have received OTA funding from the NHLBI to work on the BioData Catalyst ecosystem:
+                Researchers and other professionals from the following institutions have received OTA funding from the NHLBI to work on the BioData Catalyst ecosystem:
             </Paragraph>
             
             <LogoCloud>
@@ -83,7 +83,7 @@ const AboutPage = () => {
                 }
             </LogoCloud>
 
-            <Heading>Platforms powering our ecosystem</Heading>
+            <Heading>Platforms Powering our Ecosystem</Heading>
             
             <LogoCloud>
                 {
@@ -96,7 +96,7 @@ const AboutPage = () => {
             </LogoCloud>
 
 
-            <Heading>How you can contribute</Heading>
+            <Heading>How You Can Contribute</Heading>
 
             <Paragraph>
                 BioData Catalyst is a dynamic resource that will be continually developed and refined.
@@ -105,7 +105,7 @@ const AboutPage = () => {
 
             <ol style={{ lineHeight: 2 }}>
                 <li>Ongoing submission and upvoting of ideas via the <ExternalLink to="https://nhlbidatastage.ideascale.com/a/index">NHLBI BioDataCatalyst Ideascale</ExternalLink>.</li>
-                <li>A periodic Request for Comment (RFC) process solicits feedback from BioData Catalyst members and NHLBI. </li>
+                <li>Soliciting feedback through periodic Requests for Comment (RFC).</li>
             </ol>
                            
         </PageContent>

@@ -18,19 +18,23 @@ const DataPage = ({ data }) => {
                 keywords=""
             />
 
-            <Title>Data Access on BioData Catalyst</Title>
+            <Title>Accessing BioData Catalyst Data</Title>
             
             <Heading>Gain access to BioData Catalyst data</Heading>
 
             <Paragraph>
-                The BioData Catalyst ecosystem hosts a number of controlled datasets from the Trans-omics for Precision Medicine (<ExternalLink to="https://www.nhlbiwgs.org/">TOPMed</ExternalLink>) initiative.
+                The BioData Catalyst ecosystem currently hosts a number of controlled datasets from the Trans-omics for Precision Medicine (<ExternalLink to="https://www.nhlbiwgs.org/">TOPMed</ExternalLink>) initiative.
                 Access to these hosted datasets is controlled programmatically by services within the BioData Catalyst ecosystem for user authentication and authorization.
-                Users log into BioData Catalyst platforms using their eRA Commons credentials and authentication is performed by iTrust.
+                Users log into BioData Catalyst platforms with their eRA Commons credentials and authentication is performed by iTrust.
+            </Paragraph>
+
+            <Paragraph>
+                In the future, BioData Catalyst will host other datasets and will share additional information about accessing them at that time.
             </Paragraph>
             
             <br/>
 
-            <Heading>Check your data access</Heading>
+            <Heading>Check Your Data Access</Heading>
 
             <Paragraph>
                 Login below with your eRA Commons ID to view the data sets to which you have access.
@@ -42,10 +46,10 @@ const DataPage = ({ data }) => {
 
             <br/>
 
-            <Heading>How data access works on BioData Catalyst</Heading>
+            <Heading>How Data Access Works on BioData Catalyst</Heading>
 
             <Paragraph>
-                The BioData Catalyst ecosystem manages user access to the hosted controlled data using data access approvals from the NIH Database of Genotypes and Phenotypes (dbGaP).
+                The BioData Catalyst ecosystem manages access to the hosted controlled data using data access approvals from the NIH Database of Genotypes and Phenotypes (dbGaP).
                 Therefore, users who want to access one or more of the hosted controlled studies on the ecosystem must be approved for access to that study in dbGaP.
             </Paragraph>
             
@@ -57,18 +61,18 @@ const DataPage = ({ data }) => {
 
             <BulletedList>
                 <ListItem primary={ `
-                    Principal Investigators (PIs) who have approved Data Access Requests (DARs) on dbGaP for the BioData Catalyst datasets will be able to programmatically access those data on the platforms and services within the BioData Catalyst ecosystem.
+                    Principal Investigators (PIs) who have approved Data Access Requests (DARs) on dbGaP for the BioData Catalyst datasets will be able to programmatically access those data within the BioData Catalyst ecosystem.
                 ` } />
                 <ListItem primary={
                     <span>
-                        PIs with an approved DAR can enable their lab staff to access the hosted datasets on the BioData Catalyst ecosystem by giving the lab staff "designated downloader status" on dbGaP.
+                        PIs with approved DARs can give lab staff access to the hosted datasets on the BioData Catalyst ecosystem by giving the lab staff "designated downloader status" on dbGaP.
                         { ' ' }<ExternalLink to="https://www.youtube.com/watch?v=Yem3OH26kX4&t=1s">Learn more about this process</ExternalLink>.
                     </span>
                 } />
                 <ListItem primary={ `
-                    Please note that having other researchers listed on your dbGaP DAR application as internal and external collaborators will not result in these individuals having access to hosted dataset on BioData Catalyst.
+                    Please note that having other researchers listed on your dbGaP DAR application as internal and external collaborators will not result in these individuals having access to hosted datasets on BioData Catalyst
                     PIs will need to add internal collaborators from their dbGaP application to the list of designated downloaders as described above.
-                    In addition, external collaborators will need to go through this same process for those at their own institution.
+                    In addition, external collaborators will need to obtain  DAR approval for those at their own institution.
                 ` }/>
             </BulletedList>
 

@@ -150,14 +150,14 @@ const TrainingPage = () => (
             keywords=""
         />
 
-        <Title>Learn and support</Title>
+        <Title>Learn and Support</Title>
 
         <Paragraph>
-            The NHLBI BioData Catalyst is an ecosystem made up of many [tech word] platforms and partners that support our researchers. 
+            The NHLBI BioData Catalyst is an ecosystem made up of many platforms and partners that support our researchers.
         </Paragraph>
 
         <Paragraph>
-            Get started on the BioData Catalyst ecosystem with this collection of documentation, videos, FAQs, community forums, tutorials, blog posts, upcoming events, and more from each of our ecosystem platforms and partners. 
+            Get started on the BioData Catalyst ecosystem with this collection of documentation, videos, FAQs, community forums, tutorials, blog posts, upcoming events, and more from our ecosystem partners. 
         </Paragraph>
 
         <Paragraph>

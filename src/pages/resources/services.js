@@ -95,21 +95,21 @@ const ServicesPage = ({ data }) => {
                 keywords=""
             />
 
-            <Title>Platforms and services</Title>
+            <Title>Platforms and Services</Title>
 
-            <Heading>Explore the BioData Catalyst ecosystem</Heading>
+            <Heading>Explore the BioData Catalyst Ecosystem</Heading>
             
             <Paragraph>
                 For academic heart, lung, blood, and sleep researchers (with access to TOPMed data and capacity to analyze it),
-                the BioData Catalyst ecosystem provides researchers with several platforms and services
-                for exploring and analyzing both private and publicly hosted datasets in the cloud using pre-built and custom workflows.
+                the BioData Catalyst ecosystem several platforms and services to explore and analyze
+                both private and publicly hosted datasets in the cloud using pre-built and custom workflows.
             </Paragraph>
             
             <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
             
             <br/>
             
-            <Heading>What do you want to do today?</Heading>
+            <Heading>What Do You Want to do Today?</Heading>
 
             {
                 services.map(service => (

@@ -12,7 +12,7 @@ const ByodPage = () => (
             keywords=""
         />
 
-        <Title>Bring your own data</Title>
+        <Title>Bring Your Own Data</Title>
         
         <Paragraph>
             To support flexibility and analysis, we allow researchers to bring their own data and workflows into the ecosystem.
@@ -21,7 +21,7 @@ const ByodPage = () => (
         
         <br/>
         
-        <Heading>Build on your existing work</Heading>
+        <Heading>Build on Your Existing Work</Heading>
 
         <Paragraph>
             As described in the BioData Catalyst Data Use Policy, users can upload data for which they have the appropriate approval,
