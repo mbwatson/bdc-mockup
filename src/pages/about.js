@@ -59,7 +59,7 @@ const AboutPage = () => {
             
             <Paragraph>
                 Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor.
-                BioData Catalyst is also building a community of practice working in parallel to collaboratively solve technical challenges.
+                BioData Catalyst is also building a community of practice working to collaboratively solve technical and scientific challenges.
             </Paragraph>
 
             <Paragraph>
@@ -70,7 +70,7 @@ const AboutPage = () => {
             </Paragraph>
 
             <Paragraph>
-                Researchers and other professionals from the following institutions have received OTA funding from the NHLBI to work on the BioData Catalyst ecosystem:
+                Researchers and other professionals from the following institutions have received OTA funding from NHLBI to work on the BioData Catalyst ecosystem:
             </Paragraph>
             
             <LogoCloud>

@@ -109,7 +109,7 @@ const ServicesPage = ({ data }) => {
             
             <br/>
             
-            <Heading>What Do You Want to do Today?</Heading>
+            <Heading>What Do You Want to Do Today?</Heading>
 
             {
                 services.map(service => (

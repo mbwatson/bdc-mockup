@@ -32,10 +32,14 @@ const IndexPage = () => (
                 </CardHeader>
                 <CardBody image={{ placement: 'right', path: SickleCellImage }}>
                     <Paragraph>
-                        NHLBI BioData Catalyst is a cloud-based platform providing tools, applications, and workflows in secure workspaces. By increasing access to NHLBI data sets and innovative data analysis capabilities, BioData Catalyst accelerates efficient biomedical research that drives discovery and scientific advancement, leading to novel diagnostic tools, therapeutic options, and prevention strategies for heart, lung, blood, and sleep disorders.
+                        NHLBI BioData Catalyst is a cloud-based platform providing tools, applications, and workflows in secure workspaces.
+                        By increasing access to NHLBI datasets and innovative data analysis capabilities,
+                        BioData Catalyst accelerates efficient biomedical research that drives discovery and scientific advancement,
+                        leading to novel diagnostic tools, therapeutics, and prevention strategies for heart, lung, blood, and sleep disorders.
                     </Paragraph>
                     <Paragraph>
-                        Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor. BioData Catalyst is also building a community of practice working in parallel to collaboratively solve technical challenges. 
+                        Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor.
+                        BioData Catalyst is also building a community of practice working in parallel to collaboratively solve technical challenges. 
                     </Paragraph>
                 </CardBody>
             </Card>
@@ -46,7 +50,7 @@ const IndexPage = () => (
                 </CardHeader>
                     <CardBody image={{ placement: 'left', path: CdcScientistImage }}>
                     <Paragraph>
-                        BioData Catalyst allows NHLBI research investigators to find, access, share, store, cross-link, and compute on large scale data sets. On the platform, researchers will be able to: 
+                        BioData Catalyst allows NHLBI researchers to find, access, share, store, cross-link, and compute on large scale datasets. On the platform, researchers will be able to: 
                     </Paragraph>
                     <BulletedList>
                         <ListItem primary="Construct and enhance annotated metadata for NHLBI datasets that comply with FAIR data principles" />
