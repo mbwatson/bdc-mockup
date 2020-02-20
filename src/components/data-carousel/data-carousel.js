@@ -24,7 +24,7 @@ const carouselItems = [
     {
         key: 1,
         headline: 'Prioritizing diverse data',
-        description: 'BioData catalyst provides more diverse population data than any other resource.',
+        description: 'BioData Catalyst provides more diverse population data than any other resource.',
         data: [
             { name: 'Participants with phenotypes', value: '241,956' },
             { name: 'Interesting Value', value: 42 },
