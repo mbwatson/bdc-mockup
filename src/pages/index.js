@@ -66,8 +66,8 @@ const IndexPage = () => {
                             leading to novel diagnostic tools, therapeutics, and prevention strategies for heart, lung, blood, and sleep disorders.
                         </Paragraph>
                         <Paragraph>
-                            Though the primary goal of the BioData Catalyst project is to build a data science platform, at its core, this is a people-centric endeavor.
-                            BioData Catalyst is also building a community of practice working in parallel to collaboratively solve technical challenges. 
+                            Though the primary goal of the BioData Catalyst project is to build a data science ecosystem, at its core, this is a people-centric endeavor.
+                            BioData Catalyst is also building a community of practice working collaboratively to solve technical and scientific challenges. 
                         </Paragraph>
                     </CardBody>
                 </Card>
@@ -76,15 +76,17 @@ const IndexPage = () => {
                     <CardHeader size="large">
                         What can BioData Catalyst do for you?
                     </CardHeader>
-                        <CardBody image={{ placement: 'left', path: CdcScientistImage }}>
+                    <CardBody image={{ placement: 'left', path: CdcScientistImage }}>
                         <Paragraph>
-                            BioData Catalyst allows NHLBI researchers to find, access, share, store, cross-link, and compute on large scale datasets. On the platform, researchers will be able to: 
+                            BioData Catalyst allows researchers to find, access, share, store, cross-link, and compute on large scale datasets.
+                            In this ecosystem, researchers are able to:
                         </Paragraph>
                         <BulletedList>
-                            <ListItem primary="Construct and enhance annotated metadata for NHLBI datasets that comply with FAIR data principles" />
+                            <ListItem primary="Utilize the many “out of the box” tools available on BioData Catalyst to ease the burden of designing and testing individual tools" />
+                            <ListItem primary="Establish and use secure workspaces for collaborative analysis of NHLBI datasets and HLBS research by taking advantage of an ecosystem that brings the computation to the data, not the data to the computation" />
                             <ListItem primary="Design and test tools that search and analyze the unique characteristics of NHLBI datasets, and that also group data based on certain shared characteristics so that researchers can test hypotheses" />
-                            <ListItem primary="Use BioData Catalyst’s capabilities to integrate NHLBI imaging data with TOPMed data" />
-                            <ListItem primary="Establish and support secure workspaces for collaborative analysis specialized for NHLBI datasets and HLBS research, using a platform that brings the computation to the data, not the data to the computation" />
+                            <ListItem primary="Leverage a powerful and scalable infrastructure to share workflows, tools, datasets, and results for re-use by others" />
+                            <ListItem primary="Construct and enhance annotated metadata for NHLBI datasets that comply with FAIR data principles" />
                         </BulletedList>
                     </CardBody>
                 </Card>

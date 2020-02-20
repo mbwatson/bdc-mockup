@@ -142,9 +142,9 @@ const resources = [
     },
 ]
 
-const TrainingPage = () => (
-    <PageContent width="95%" maxWidth="1080px" center gutters>
-        <SEO
+const LearnPage = () => (
+    <PageContent width="95%" maxWidth="1200px" center gutters>
+w        <SEO
             title="Learn and Support"
             description=""
             keywords=""
@@ -188,4 +188,4 @@ const TrainingPage = () => (
     </PageContent>
 )
 
-export default TrainingPage
+export default LearnPage

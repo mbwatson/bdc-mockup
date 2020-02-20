@@ -85,7 +85,7 @@ const ServicesPage = ({ data }) => {
     ]
 
     return (
-        <PageContent width="95%" maxWidth="1080px" center gutters>
+        <PageContent width="95%" maxWidth="1200px" center gutters>
             <SEO
                 title="Platforms & Services"
                 description=""
@@ -97,9 +97,9 @@ const ServicesPage = ({ data }) => {
             <Heading>Explore the BioData Catalyst Ecosystem</Heading>
             
             <Paragraph>
-                For academic heart, lung, blood, and sleep researchers (with access to TOPMed data and capacity to analyze it),
-                the BioData Catalyst ecosystem several platforms and services to explore and analyze
-                both private and publicly hosted datasets in the cloud using pre-built and custom workflows.
+                For heart, lung, blood, and sleep researchers, the BioData Catalyst ecosystem offers
+                several platforms and services to explore and analyze both private and publicly-hosted datasets
+                in the cloud using pre-built and custom workflows.
             </Paragraph>
 
             <br/>

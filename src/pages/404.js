@@ -52,7 +52,7 @@ const NotFoundAnimation = ({ color }) => {
 }
 
 const NotFoundPage = () => (
-    <PageContent width="95%" maxWidth="1080px" center gutters>
+    <PageContent width="95%" maxWidth="1200px" center gutters>
         <SEO title="404: Not found" />
         
         <Title center>Oh no!</Title>

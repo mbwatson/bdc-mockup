@@ -4,12 +4,12 @@ import { PageContent } from '../components/layout'
 import { Title, Paragraph } from '../components/typography'
 
 const ContactPage = () => (
-    <PageContent width="95%" maxWidth="1080px" center gutters>
-            <SEO
-                title="Contact"
-                description=""
-                keywords=""
-            />
+    <PageContent width="95%" maxWidth="1200px" center gutters>
+        <SEO
+            title="Contact"
+            description=""
+            keywords=""
+        />
 
         <Title>Contact</Title>
 

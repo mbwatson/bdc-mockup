@@ -5,7 +5,7 @@ import { Title, Heading, Paragraph } from '../components/typography'
 import { ExternalLink } from '../components/link'
 
 const LegalPage = () => (
-    <PageContent width="95%" maxWidth="1080px" center gutters>
+    <PageContent width="95%" maxWidth="1200px" center gutters>
         <SEO
             title="Legal"
             description=""

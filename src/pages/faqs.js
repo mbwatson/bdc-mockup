@@ -21,7 +21,7 @@ const FaqPage = () => {
     const { isLoading, folders, error } = useFreshdesk()
 
     return (
-        <PageContent width="95%" maxWidth="1080px" center gutters>
+        <PageContent width="95%" maxWidth="1200px" center gutters>
             <SEO
                 title="Frequently Asked Questions"
                 description=""

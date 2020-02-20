@@ -36,7 +36,7 @@ const AboutPage = () => {
         .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
     
     return (
-        <PageContent width="95%" maxWidth="1080px" center gutters>
+        <PageContent width="95%" maxWidth="1200px" center gutters>
             <SEO
                 title="About BioData Catalyst"
                 description=""

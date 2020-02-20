@@ -11,7 +11,7 @@ const DataPage = ({ data }) => {
     const { dataBucketsGraphic } = data
 
     return (
-        <PageContent width="95%" maxWidth="1080px" center gutters>
+        <PageContent width="95%" maxWidth="1200px" center gutters>
             <SEO
                 title="BioData Catalyst Data Access"
                 description=""
@@ -20,7 +20,7 @@ const DataPage = ({ data }) => {
 
             <Title>Accessing BioData Catalyst Data</Title>
             
-            <Heading>Gain access to BioData Catalyst data</Heading>
+            <Heading>Gain Access to BioData Catalyst Data</Heading>
 
             <Paragraph>
                 The BioData Catalyst ecosystem currently hosts a number of controlled datasets from the Trans-omics for Precision Medicine (<ExternalLink to="https://www.nhlbiwgs.org/">TOPMed</ExternalLink>) initiative.
@@ -72,7 +72,7 @@ const DataPage = ({ data }) => {
                 <ListItem primary={ `
                     Please note that having other researchers listed on your dbGaP DAR application as internal and external collaborators will not result in these individuals having access to hosted datasets on BioData Catalyst
                     PIs will need to add internal collaborators from their dbGaP application to the list of designated downloaders as described above.
-                    In addition, external collaborators will need to obtain  DAR approval for those at their own institution.
+                    In addition, external collaborators will need to obtain DAR approval for those at their institutions.
                 ` }/>
             </BulletedList>
 
