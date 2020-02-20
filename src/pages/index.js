@@ -9,6 +9,7 @@ import { PageContent, Container } from '../components/layout'
 import { DataCarousel } from '../components/data-carousel'
 import { HexMenu } from '../components/menus'
 import { BulletedList, ListItem } from '../components/list'
+import { SlideTray } from '../components/slide-tray'
 import { Hidden } from 'react-grid-system'
 import SickleCellImage from '../images/sickle-cell.jpg'
 import CdcScientistImage from '../images/cdc-scientist.jpg'
@@ -97,7 +98,7 @@ const IndexPage = () => {
                         Researchers and other professionals from the following institutions have received OTA funding from NHLBI to work on the BioData Catalyst ecosystem.
                     </Paragraph>
                     
-                    <LogoCloud>
+                    <SlideTray title="" trayHeight="calc(80px + 2rem)">
                         {
                             partners.map(
                                 partner => (
@@ -105,7 +106,7 @@ const IndexPage = () => {
                                 )
                             )
                         }
-                    </LogoCloud>
+                    </SlideTray>
                 </section>
 
                 <br/>
