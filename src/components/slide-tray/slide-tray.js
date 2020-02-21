@@ -24,10 +24,11 @@ const TrayTitle = styled.header`
     padding: 0.5rem 0;
 `
 
+const SCROLL_AMOUNT = 5
 export const SlideTray = ({ title, trayHeight, children }) => {
     const [scrollToRight, setScrollToRight] = useState(true)
+    const [scrollAmount, setScrollAmount] = useState(SCROLL_AMOUNT) // in pixels
     const trayRef = useRef()
-    const scrollAmount = 5 // in pixels
 
     useEffect(() => {
         if (trayRef !== null) {
@@ -39,14 +40,13 @@ export const SlideTray = ({ title, trayHeight, children }) => {
                 })
                 if (trayRef.current.scrollLeft <= 0) setScrollToRight(true)
                 if (trayRef.current.scrollLeft >= trayRef.current.scrollLeftMax) setScrollToRight(false)
-                console.log(scrollToRight ? 'scrolling right' : 'scrolling left')
             }, 100)
             return () => clearInterval(timer)
         }
-    }, [scrollToRight])
+    }, [scrollToRight, scrollAmount])
 
     return (
-        <Wrapper>
+        <Wrapper onMouseOver={ () => setScrollAmount(0) } onMouseOut={ () => setScrollAmount(SCROLL_AMOUNT) } >
             { title &&  <TrayTitle>{ title }</TrayTitle> }
             <Tray height={ trayHeight } ref={ trayRef } className="logo-slider">
                 { children }
