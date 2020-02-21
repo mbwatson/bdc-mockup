@@ -9,13 +9,6 @@ import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { List, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
-import ServiceDataSvg from '../images/service-ecosystem/service-data.svg' 
-import ServiceSearchSvg from '../images/service-ecosystem/service-search.svg' 
-import ServiceAnalysisSvg from '../images/service-ecosystem/service-analysis.svg' 
-import ServiceDataSvgMobile from '../images/service-ecosystem/mobile_service-data.svg' 
-import ServiceSearchSvgMobile from '../images/service-ecosystem/mobile_service-search.svg' 
-import ServiceAnalysisSvgMobile from '../images/service-ecosystem/mobile_service-analysis.svg' 
-import { useWindowWidth } from '../hooks'
 import { Container as Grid, Row, Col, Hidden } from 'react-grid-system'
 
 const marchAnimation = keyframes`
@@ -29,8 +22,8 @@ const AnimateDashedBorder = styled.div`
     }
 `
 
-const AboutPage = () => {
-    const { isCompact } = useWindowWidth()
+const AboutPage = ({ data }) => {
+    const { platformsAndServicesGraphic } = data
     const partners = usePartners()
     const platforms = usePlatforms()
         .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
@@ -91,59 +84,17 @@ const AboutPage = () => {
                         </section>
             
                         <br/>
-            
+
                         <section id="ecosystem">
-                            <Heading>How the BioData Catalyst Ecosystem Works</Heading>
-            
+                            <Heading>The BioData Catalyst Ecosystem</Heading>
+                            
+                            <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
+
                             <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quos libero quaerat cum ipsum, impedit accusantium exercitationem voluptatem obcaecati. Fugit voluptates est repudiandae eveniet harum earum eaque id ut porro fugiat ad quo eum iure, vitae reiciendis sapiente cumque accusamus ipsum distinctio iusto necessitatibus aspernatur?
-                            </Paragraph>
-            
-                            <br/>
-                            
-                            {
-                                isCompact
-                                    ? <AnimateDashedBorder><ServiceDataSvgMobile width="100%" height="none" /></AnimateDashedBorder>
-                                    : <AnimateDashedBorder><ServiceDataSvg width="100%" height="none" /></AnimateDashedBorder>
-                            }
-            
-                            <br/>
-                            
-                            <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates, perspiciatis aut doloremque porro reprehenderit repudiandae. Amet nostrum adipisci, impedit vero necessitatibus quam reiciendis tenetur ipsam ab itaque repudiandae cumque voluptas totam nemo unde sed, alias aliquam qui, debitis obcaecati sunt! A maxime provident porro.
-                            </Paragraph>
-            
-                            <br/>
-                            
-                            {
-                                isCompact
-                                    ? <AnimateDashedBorder><ServiceSearchSvgMobile width="100%" height="none" /></AnimateDashedBorder>
-                                    : <AnimateDashedBorder><ServiceSearchSvg width="100%" height="none" /></AnimateDashedBorder>
-                            }
-            
-                            <br/>
-                            
-                            <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt animi mollitia ex, vitae quidem. Corrupti amet quae pariatur, eligendi et nihil consequatur! Labore mollitia consequatur asperiores, vitae repellendus? Illum excepturi numquam molestiae ex praesentium. Fugiat repellendus nobis, at, blanditiis ad ullam reprehenderit perferendis explicabo reiciendis!
-                            </Paragraph>
-                            
-                            <br/>
-            
-                            {
-                                isCompact
-                                    ? <AnimateDashedBorder><ServiceAnalysisSvgMobile width="100%" height="none" /></AnimateDashedBorder>
-                                    : <AnimateDashedBorder><ServiceAnalysisSvg width="100%" height="none" /></AnimateDashedBorder>
-                            }
-                            
-                            <br/>
-                            
-                            <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates fuga ratione eveniet, inventore. Beatae, aperiam sunt repellendus. Nobis cum impedit dolore alias officia voluptatem nesciunt, tempora totam iure consequatur modi atque facilis velit consectetur corrupti nihil. Deleniti nesciunt saepe placeat ullam, amet fuga voluptates et.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident a quia odio, adipisci nostrum libero nesciunt soluta neque dolorem, culpa animi harum architecto ad unde earum quam eligendi officia deserunt!
                             </Paragraph>
                         </section>
             
-                        <br/>
-                        
                         <section id="contributing">
                             <Heading>How You Can Contribute</Heading>
                 
@@ -168,3 +119,15 @@ const AboutPage = () => {
 }
 
 export default AboutPage
+
+export const query = graphql`
+    {
+        platformsAndServicesGraphic: file(relativePath: {eq: "platforms-and-services.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`
