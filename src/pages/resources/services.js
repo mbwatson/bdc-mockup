@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
-import Img from 'gatsby-image'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { SEO } from '../../components/seo'
 import { PageContent } from '../../components/layout'
@@ -57,7 +56,6 @@ const Separator = styled.div`
 `
 
 const ServicesPage = ({ data }) => {
-    const { platformsAndServicesGraphic } = data
     const platforms = usePlatforms()
     
     const services = [
@@ -160,15 +158,3 @@ const ServicesPage = ({ data }) => {
 }
 
 export default ServicesPage
-
-export const query = graphql`
-    {
-        platformsAndServicesGraphic: file(relativePath: {eq: "platforms-and-services.png"}) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`

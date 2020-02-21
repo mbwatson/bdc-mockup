@@ -1,9 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
-import styled, { keyframes } from 'styled-components'
 import { SEO } from '../components/seo'
-import { usePartners, usePlatforms } from '../hooks'
 import Img from 'gatsby-image'
 import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
@@ -11,22 +8,8 @@ import { List, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
 import { Container as Grid, Row, Col, Hidden } from 'react-grid-system'
 
-const marchAnimation = keyframes`
-    0% { stroke-dashoffset: 0; }
-    100% { stroke-dashoffset: 6; }
-`
-
-const AnimateDashedBorder = styled.div`
-    .dashed-border {
-        animation: ${ marchAnimation } 4000ms linear infinite;
-    }
-`
-
 const AboutPage = ({ data }) => {
     const { platformsAndServicesGraphic } = data
-    const partners = usePartners()
-    const platforms = usePlatforms()
-        .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
     
     return (
         <PageContent width="95%" maxWidth="1200px" center gutters>

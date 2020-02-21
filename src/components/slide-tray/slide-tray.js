@@ -46,7 +46,10 @@ export const SlideTray = ({ title, trayHeight, children }) => {
     }, [scrollToRight, scrollAmount])
 
     return (
-        <Wrapper onMouseOver={ () => setScrollAmount(0) } onMouseOut={ () => setScrollAmount(SCROLL_AMOUNT) } >
+        <Wrapper
+            onMouseOver={ () => setScrollAmount(0) } onMouseOut={ () => setScrollAmount(SCROLL_AMOUNT) }
+            onFocus={ () => setScrollAmount(0) } onBlur={ () => setScrollAmount(SCROLL_AMOUNT) } 
+        >
             { title &&  <TrayTitle>{ title }</TrayTitle> }
             <Tray height={ trayHeight } ref={ trayRef } className="logo-slider">
                 { children }
