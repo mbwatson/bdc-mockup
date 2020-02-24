@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { SEO } from '../../components/seo'
 import { PageContent } from '../../components/layout'
 import { Title, Heading, Paragraph } from '../../components/typography'
+import { Container as Grid, Row, Col, Visible, Hidden } from 'react-grid-system'
 import { Card, CardHeader, CardBody } from '../../components/card'
-import { Container as Grid, Row, Col, Visible } from 'react-grid-system'
+import { List, ListItem } from '../../components/list'
 import { ExternalLink } from '../../components/link'
 import { usePlatforms } from '../../hooks'
 
@@ -56,6 +59,7 @@ const Separator = styled.div`
 `
 
 const ServicesPage = ({ data }) => {
+    const { platformsAndServicesGraphic } = data
     const platforms = usePlatforms()
     
     const services = [
@@ -89,72 +93,103 @@ const ServicesPage = ({ data }) => {
                 description=""
                 keywords=""
             />
+            <Grid>
+                <Row>
+                    <Hidden xs sm>
+                        <Col md={ 3 }>
+                            <List style={{ position: 'sticky', top: '16rem', paddingRight: '2rem' }} right>
+                                <ListItem primary={ <AnchorLink to="/resources/services#ecosystem">Our Ecosystem</AnchorLink> } />
+                                <ListItem primary={ <AnchorLink to="/resources/services#actions">What Do You Want To Do Today?</AnchorLink> } />
+                            </List>
+                        </Col>
+                    </Hidden>
+                    <Col>
+                        <Title>Platforms and Services</Title>
 
-            <Title>Platforms and Services</Title>
+                        <Heading id="ecosystem">Explore the BioData Catalyst Ecosystem</Heading>
+                        
+                        <Paragraph>
+                            For heart, lung, blood, and sleep researchers, the BioData Catalyst ecosystem offers
+                            several platforms and services to explore and analyze both private and publicly-hosted datasets
+                            in the cloud using pre-built and custom workflows.
+                        </Paragraph>
 
-            <Heading>Explore the BioData Catalyst Ecosystem</Heading>
-            
-            <Paragraph>
-                For heart, lung, blood, and sleep researchers, the BioData Catalyst ecosystem offers
-                several platforms and services to explore and analyze both private and publicly-hosted datasets
-                in the cloud using pre-built and custom workflows.
-            </Paragraph>
+                        <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
 
-            <br/>
-            
-            <Heading>What Do You Want to Do Today?</Heading>
+                        <br/>
+                        
+                        <Heading id="actions">What Do You Want to Do Today?</Heading>
 
-            {
-                services.map(service => (
-                    <Card key={ service.cardTitle }>
-                        <CardHeader>{ service.cardTitle }</CardHeader>
-                        <CardBody>
-                            <Grid fluid>
-                                <Row gutterWidth={ 0 }>
-                                    {
-                                        service.cardItems.map((platform, i) => (
-                                            <Fragment key={ i }>
-                                                <Col xs={ 12 } md={ 5 } style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                                                    <h3 style={{ textAlign: 'center' }}>BioData Catalyst powered by { platform.frontmatter.title }</h3>
-                                                    <Paragraph>
-                                                        { platform.frontmatter.service }
-                                                    </Paragraph>
-                                                    <ToolLinks>
-                                                        <ExternalToolLink to={ platform.frontmatter.links.launch }>Launch</ExternalToolLink>
-                                                        | 
-                                                        <ExternalToolLink to={ platform.frontmatter.links.documentation }>Documentation</ExternalToolLink>
-                                                        | 
-                                                        <InternalToolLink to={ platform.frontmatter.path }>Learn More</InternalToolLink>
-                                                    </ToolLinks>
-                                                </Col>
-                                                {
-                                                    i + 1 < service.cardItems.length && (
-                                                        <Fragment>
-                                                            <Visible md lg xl>
-                                                                <Col md={ 2 }>
-                                                                    <Separator vertical />
+                        {
+                            services.map(service => (
+                                <Row>
+                                    <Card key={ service.cardTitle }>
+                                        <CardHeader>{ service.cardTitle }</CardHeader>
+                                        <CardBody>
+                                            <Grid fluid>
+                                                <Row gutterWidth={ 0 }>
+                                                    {
+                                                        service.cardItems.map((platform, i) => (
+                                                            <Fragment key={ i }>
+                                                                <Col xs={ 12 } lg={ 5 } style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                                                                    <h3 style={{ textAlign: 'center' }}>BioData Catalyst powered by { platform.frontmatter.title }</h3>
+                                                                    <Paragraph>
+                                                                        { platform.frontmatter.service }
+                                                                    </Paragraph>
+                                                                    <ToolLinks>
+                                                                        <ExternalToolLink to={ platform.frontmatter.links.launch }>Launch</ExternalToolLink>
+                                                                        | 
+                                                                        <ExternalToolLink to={ platform.frontmatter.links.documentation }>Documentation</ExternalToolLink>
+                                                                        | 
+                                                                        <InternalToolLink to={ platform.frontmatter.path }>Learn</InternalToolLink>
+                                                                    </ToolLinks>
                                                                 </Col>
-                                                            </Visible>
-                                                            <Visible xs sm>
-                                                                <Col xs={ 12 }>
-                                                                    <Separator horizontal />
-                                                                </Col>
-                                                            </Visible>                                                
-                                                        </Fragment>
-                                                    )
-                                                }
-                                            </Fragment>
-                                        ))
-                                    }
+                                                                {
+                                                                    i + 1 < service.cardItems.length && (
+                                                                        <Fragment>
+                                                                            <Visible lg xl>
+                                                                                <Col md={ 2 }>
+                                                                                    <Separator vertical />
+                                                                                </Col>
+                                                                            </Visible>
+                                                                            <Visible xs sm md>
+                                                                                <Col xs={ 12 }>
+                                                                                    <Separator horizontal />
+                                                                                </Col>
+                                                                            </Visible>                                                
+                                                                        </Fragment>
+                                                                    )
+                                                                }
+                                                            </Fragment>
+                                                        ))
+                                                    }
+                                                </Row>
+                                            </Grid>
+                                        </CardBody>
+                                    </Card>
                                 </Row>
-                            </Grid>
-                        </CardBody>
-                    </Card>
-                ))
-            }
+                            ))
+                        }
 
+                        
+                    </Col>
+                </Row>    
+            </Grid>
+            
         </PageContent>
     )
 }
 
 export default ServicesPage
+
+export const query = graphql`
+    {
+        platformsAndServicesGraphic: file(relativePath: {eq: "platforms-and-services.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`
