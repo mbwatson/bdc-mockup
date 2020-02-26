@@ -30,11 +30,11 @@ const AccessibilityPage = () => (
 
         <Heading>Authorization of Use</Heading>
         <Paragraph>
-            Access to hosted data is controlled through the <ExternalLink to="https://dbgap.ncbi.nlm.nih.gov">Database of Genotypes and Phenotypes (dbGaP)</ExternalLink> system by authorization of the appropriate Data Access Committee (DAC).
+            Access to hosted data is controlled through the <ExternalLink to="https://dbgap.ncbi.nlm.nih.gov">Database of Genotypes and Phenotypes</ExternalLink> (dbGaP) system by authorization of the appropriate Data Access Committee (DAC).
             Data Access Committees are established based on programmatic areas of interest as well as technical and ethical expertise.
             All DACs operate through common principles and under similar mechanisms to ensure the consistency and transparency of the controlled-data access process.
-            Use of industry standard <ExternalLink to="https://oauth.net/">OAuth 2.0</ExternalLink> and <ExternalLink to="https://openid.net/connect/">Open ID Connect (OIDC)</ExternalLink> services,
-            which are connected to <ExternalLink to="https://era.nih.gov/">NIH’s electronic Research Administration (eRA)</ExternalLink> infrastructure for authentication and authorization,
+            Use of industry standard <ExternalLink to="https://oauth.net/">OAuth 2.0</ExternalLink> and <ExternalLink to="https://openid.net/connect/">Open ID Connect</ExternalLink> (OIDC) services,
+            which are connected to <ExternalLink to="https://era.nih.gov/">NIH’s electronic Research Administration</ExternalLink> (eRA) infrastructure for authentication and authorization,
             ensures that only data objects approved for access by NIH DACs and approved in dbGaP are available to a user in BioData Catalyst.
         </Paragraph>
  
