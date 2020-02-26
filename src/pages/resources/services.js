@@ -100,6 +100,7 @@ const ServicesPage = ({ data }) => {
                             <List style={{ position: 'sticky', top: '16rem', paddingRight: '2rem' }} right>
                                 <ListItem primary={ <AnchorLink to="/resources/services#ecosystem">Our Ecosystem</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/resources/services#actions">What Do You Want To Do Today?</AnchorLink> } />
+                                <ListItem primary={ <AnchorLink to="/resources/services#imputation-server">Imputation Server</AnchorLink> } />
                             </List>
                         </Col>
                     </Hidden>
@@ -171,7 +172,27 @@ const ServicesPage = ({ data }) => {
                             ))
                         }
 
-                        
+                        <section id="imputation-server">
+                            <Heading id="actions">Imputation Server</Heading>
+                            <Card>
+                                <CardHeader>Access the Imputation Server</CardHeader>
+                                <CardBody>
+                                    <h3 style={{ textAlign: 'center' }}> Imputation Server developed by the University of Michigan</h3>
+                                    <Paragraph>
+                                        Upload your own phased or unphased GWAS genotypes to the server and receive phased and imputed genomes in return.
+                                        The server offers imputation from various reference panels including the TOPMed reference panel. 
+                                    </Paragraph>
+                                    <ToolLinks>
+                                        <ExternalToolLink to="http://imputation.biodatacatalyst.nhlbi.nih.gov">Launch</ExternalToolLink>
+                                        | 
+                                        <ExternalToolLink to="https://imputationserver.readthedocs.io/en/latest/">Documentation</ExternalToolLink>
+                                        | 
+                                        <InternalToolLink to="https://pubmed.ncbi.nlm.nih.gov/27571263-next-generation-genotype-imputation-service-and-methods/">Learn</InternalToolLink>
+                                    </ToolLinks>
+                                </CardBody>
+                            </Card>
+                        </section>
+
                     </Col>
                 </Row>    
             </Grid>
