@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components'
 import { SEO } from '../components/seo'
 import { PageContent } from '../components/layout'
 import { Title, Paragraph } from '../components/typography'
-import { usePlatforms } from '../hooks'
 import ServiceDataSvg from '../images/service-ecosystem/service-data.svg' 
 import ServiceSearchSvg from '../images/service-ecosystem/service-search.svg' 
 import ServiceAnalysisSvg from '../images/service-ecosystem/service-analysis.svg' 
@@ -25,32 +24,7 @@ const AnimateDashedBorder = styled.div`
 
 const EcosystemPage = () => {
     const { isCompact } = useWindowWidth()
-    const platforms = usePlatforms()
     
-    const services = [
-        {
-            cardTitle: 'Explore Available Data',
-            cardItems: [
-                platforms.find(platform => platform.frontmatter.title === 'Gen3'),
-                platforms.find(platform => platform.frontmatter.title === 'PIC-SURE'),
-            ]
-        },
-        {
-            cardTitle: 'Analyze Data in Cloud-based Shared Workspaces',
-            cardItems: [
-                platforms.find(platform => platform.frontmatter.title === 'Seven Bridges'),
-                platforms.find(platform => platform.frontmatter.title === 'Terra'),
-            ]
-        },
-        {
-            cardTitle: 'Use Community Tools on Controlled-access Datasets',
-            cardItems: [
-                platforms.find(platform => platform.frontmatter.title === 'Dockstore'),
-                platforms.find(platform => platform.frontmatter.title === 'HeLx'),
-            ]
-        },
-    ]
-
     return (
         <PageContent width="95%" maxWidth="1080px" center gutters>
             <SEO

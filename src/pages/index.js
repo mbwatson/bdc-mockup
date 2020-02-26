@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { SEO } from '../components/seo'
 import styled from 'styled-components'
@@ -13,16 +12,7 @@ import { SlideTray } from '../components/slide-tray'
 import { Hidden } from 'react-grid-system'
 import SickleCellImage from '../images/sickle-cell.jpg'
 import CdcScientistImage from '../images/cdc-scientist.jpg'
-import { usePartners, usePlatforms } from '../hooks'
-
-const LogoCloud = styled.div`
-    text-align: center;
-    margin: 2rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-`
+import { usePartners } from '../hooks'
 
 const MutedImage = styled(Img)`
     margin: 1rem;
@@ -35,8 +25,6 @@ const MutedImage = styled(Img)`
 
 const IndexPage = () => {
     const partners = usePartners()
-    const platforms = usePlatforms()
-        .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
 
     return (
         <PageContent>
@@ -111,27 +99,8 @@ const IndexPage = () => {
                     </SlideTray>
                 </section>
 
-                <br/>
-                
-                <section id="platforms">
-                    <Heading center>Platforms Powering the BioData Catalyst Ecosystem</Heading>
+                <br/><br/><br/>
 
-                    <Paragraph>
-                        The following platforms make accessing, searching, and analyzing data in the BioData Catalyst ecosystem possible.
-                        Learn more about <Link to="/about#ecosystem">how these platforms work together</Link>.
-                    </Paragraph>
-                    
-                    <LogoCloud>
-                        {
-                            platforms.map(platform => (
-                                <Link key={ platform.title } to={ platform.path }>
-                                    <MutedImage fixed={ platform.logo.childImageSharp.fixed } alt={ `${ platform.title.replace('-', ' ') } logo` } />
-                                </Link>
-                            ))
-                        }
-                    </LogoCloud>
-                </section>
-                
             </Container>
 
         </PageContent>

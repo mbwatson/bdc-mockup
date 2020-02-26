@@ -1,15 +1,33 @@
 import React from 'react'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { SEO } from '../components/seo'
-import Img from 'gatsby-image'
+import styled from 'styled-components'
 import { PageContent } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { List, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
 import { Container as Grid, Row, Col, Hidden } from 'react-grid-system'
+import { usePlatforms } from '../hooks'
+
+const LogoCloud = styled.div`
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+`
+
+const PlatformImage = styled(Img)`
+    margin: 2rem;
+`
 
 const AboutPage = ({ data }) => {
     const { platformsAndServicesGraphic } = data
+    const platforms = usePlatforms()
+        .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
     
     return (
         <PageContent width="95%" maxWidth="1200px" center gutters>
@@ -27,6 +45,7 @@ const AboutPage = ({ data }) => {
                                 <ListItem primary={ <AnchorLink to="/about#what-we-are">What we Are</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#who-we-are">Who we Are</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#ecosystem">Our Ecosystem</AnchorLink> } />
+                                <ListItem primary={ <AnchorLink to="/about#platforms">Platforms</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#contributing">Contributing</AnchorLink> } />
                             </List>
                         </Col>
@@ -73,9 +92,27 @@ const AboutPage = ({ data }) => {
                             
                             <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
 
+                        </section>
+
+                        <br/>
+
+                        <section id="platforms">
+                            <Heading>Platforms Powering the BioData Catalyst Ecosystem</Heading>
+
                             <Paragraph>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident a quia odio, adipisci nostrum libero nesciunt soluta neque dolorem, culpa animi harum architecto ad unde earum quam eligendi officia deserunt!
+                                The following platforms make accessing, searching, and analyzing data in the BioData Catalyst ecosystem possible.
+                                Learn more about <Link to="/about#ecosystem">how these platforms work together</Link>.
                             </Paragraph>
+                            
+                            <LogoCloud>
+                                {
+                                    platforms.map(platform => (
+                                        <Link key={ platform.title } to={ platform.path }>
+                                            <PlatformImage fixed={ platform.logo.childImageSharp.fixed } alt={ `View details about ${ platform.title.replace('-', ' ') }` } />
+                                        </Link>
+                                    ))
+                                }
+                            </LogoCloud>
                         </section>
             
                         <section id="contributing">

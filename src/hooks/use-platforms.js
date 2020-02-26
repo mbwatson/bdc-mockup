@@ -18,7 +18,7 @@ const platformsQuery = graphql`
                         logo {
                             id
                             childImageSharp {
-                                fixed(fit: CONTAIN, height: 100) {
+                                fixed(fit: CONTAIN, height: 120) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }
