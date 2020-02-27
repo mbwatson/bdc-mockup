@@ -124,7 +124,7 @@ const AboutPage = ({ data }) => {
                             </Paragraph>
                 
                             <ol style={{ lineHeight: 2 }}>
-                                <li>Ongoing submission and upvoting of ideas via the <ExternalLink to="https://nhlbidatastage.ideascale.com/a/index">NHLBI BioDataCatalyst Ideascale</ExternalLink>.</li>
+                                <li>Ongoing submission and upvoting of ideas via the <ExternalLink to="https://biodatacatalyst.ideascale.com/">NHLBI BioDataCatalyst Ideascale</ExternalLink>.</li>
                                 <li>Soliciting feedback through periodic Requests for Comment (RFC).</li>
                             </ol>
                         </section>
