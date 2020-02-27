@@ -144,7 +144,7 @@ const resources = [
 
 const LearnPage = () => (
     <PageContent width="95%" maxWidth="1200px" center gutters>
-w        <SEO
+        <SEO
             title="Learn and Support"
             description=""
             keywords=""
