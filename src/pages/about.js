@@ -10,7 +10,6 @@ import { List, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
 import { Container as Grid, Row, Col, Hidden } from 'react-grid-system'
 import { usePartners, usePlatforms } from '../hooks'
-import { Accordion, Panel } from '@mwatson/react-accessible-accordion'
 
 const LogoCloud = styled.div`
     text-align: center;
@@ -106,8 +105,10 @@ const AboutPage = () => {
 
                         </section>
 
+                        <br/>
+
                         <section id="ecosystem">
-                            <Heading>Out Ecosystem</Heading>
+                            <Heading>Our Ecosystem</Heading>
 
                             <Paragraph>
                                 For heart, lung, blood, and sleep researchers, the BioData Catalyst ecosystem offers several platforms and services to explore and analyze
