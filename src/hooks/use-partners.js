@@ -7,6 +7,7 @@ const partnersQuery = graphql`
                 node {
                     id
                     name
+                    ota
                     image {
                         id
                         childImageSharp {

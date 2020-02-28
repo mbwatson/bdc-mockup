@@ -5,11 +5,11 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { SEO } from '../components/seo'
 import styled from 'styled-components'
 import { PageContent } from '../components/layout'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { List, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
 import { Container as Grid, Row, Col, Hidden } from 'react-grid-system'
-import { usePlatforms } from '../hooks'
+import { usePartners, usePlatforms } from '../hooks'
 
 const LogoCloud = styled.div`
     text-align: center;
@@ -25,6 +25,7 @@ const PlatformImage = styled(Img)`
 `
 
 const AboutPage = ({ data }) => {
+    const partners = usePartners()
     const { platformsAndServicesGraphic } = data
     const platforms = usePlatforms()
         .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
@@ -44,8 +45,6 @@ const AboutPage = ({ data }) => {
                             <List style={{ position: 'sticky', top: '16rem', paddingRight: '2rem' }} right>
                                 <ListItem primary={ <AnchorLink to="/about#what-we-are">What we Are</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#who-we-are">Who we Are</AnchorLink> } />
-                                <ListItem primary={ <AnchorLink to="/about#ecosystem">Our Ecosystem</AnchorLink> } />
-                                <ListItem primary={ <AnchorLink to="/about#platforms">Platforms</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#contributing">Contributing</AnchorLink> } />
                             </List>
                         </Col>
@@ -78,26 +77,21 @@ const AboutPage = ({ data }) => {
                             </Paragraph>
             
                             <Paragraph>
-                                The BioData Catalyst ecosystem is funded by the National Heart, Lung, and Blood Institute (NHLBI) through a flexible mechanism called Other Transactions (OT).
-                                The OT mechanism gives NHLBI considerable flexibility in making and managing awards.
-                                This is particularly important for the BioData Catalyst to stay nimble as it approaches the complex tasks involved in the development of this ecosystem
-                                under the ever-changing conditions of data science and biomedical science.
+                                The BioData Catalyst ecosystem is funded by the National Heart, Lung, and Blood Institute (NHLBI) designed
+                                to be nimble and responsive to the ever-changing conditions of the data and biomedical science community.  
                             </Paragraph>
-                        </section>
-            
-                        <br/>
 
-                        <section id="ecosystem">
-                            <Heading>The BioData Catalyst Ecosystem</Heading>
-                            
-                            <Img style={{ width: '90%', margin: 'auto' }} fluid={ platformsAndServicesGraphic.childImageSharp.fluid } />
+                            <Subheading>Partners Powering Our Ecosystem</Subheading>
 
-                        </section>
+                            <Paragraph>
+                                Researchers and other professionals from the following institutions have received funding from NHLBI to work on the BioData Catalyst ecosystem
+                            </Paragraph>
 
-                        <br/>
+                            <List dense>
+                                { partners.map(partner => <ListItem primary={ partner.name } secondary={ partner.ota } />) }
+                            </List>
 
-                        <section id="platforms">
-                            <Heading>Platforms Powering the BioData Catalyst Ecosystem</Heading>
+                            <Subheading>Platforms Powering Our Ecosystem</Subheading>
 
                             <Paragraph>
                                 The following platforms make accessing, searching, and analyzing data in the BioData Catalyst ecosystem possible.
