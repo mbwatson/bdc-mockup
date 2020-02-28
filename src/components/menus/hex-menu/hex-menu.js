@@ -26,7 +26,7 @@ const carouselItems = [
     },
     {
         text: 'BYOD',
-        description: 'Get the support you need to explore, analyze, and discover',
+        description: 'Use the BioData Catalyst ecosystem to build on your existing work',
         icon: ByodIcon,
         path: '/resources/byod',
     },
