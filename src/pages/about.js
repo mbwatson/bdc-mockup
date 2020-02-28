@@ -148,7 +148,7 @@ const AboutPage = () => {
                         </section>
             
                         <section id="contributing">
-                            <Heading>How You Can Contribute</Heading>
+                            <Heading>Contribute to the Ecosystem Development</Heading>
                 
                             <Paragraph>
                                 BioData Catalyst is a dynamic resource that will be continually developed and refined.
