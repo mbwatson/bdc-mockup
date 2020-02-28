@@ -24,9 +24,8 @@ const PlatformImage = styled(Img)`
     margin: 2rem;
 `
 
-const AboutPage = ({ data }) => {
+const AboutPage = () => {
     const partners = usePartners()
-    const { platformsAndServicesGraphic } = data
     const platforms = usePlatforms()
         .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
     
@@ -95,7 +94,6 @@ const AboutPage = ({ data }) => {
 
                             <Paragraph>
                                 The following platforms make accessing, searching, and analyzing data in the BioData Catalyst ecosystem possible.
-                                Learn more about <Link to="/about#ecosystem">how these platforms work together</Link>.
                             </Paragraph>
                             
                             <LogoCloud>
@@ -107,6 +105,11 @@ const AboutPage = ({ data }) => {
                                     ))
                                 }
                             </LogoCloud>
+
+                            <Paragraph>
+                                Learn more about <Link to="/about#ecosystem">how these platforms work together</Link>.
+                            </Paragraph>
+                            
                         </section>
             
                         <section id="contributing">
@@ -133,15 +136,3 @@ const AboutPage = ({ data }) => {
 }
 
 export default AboutPage
-
-export const query = graphql`
-    {
-        platformsAndServicesGraphic: file(relativePath: {eq: "platforms-and-services.png"}) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`
