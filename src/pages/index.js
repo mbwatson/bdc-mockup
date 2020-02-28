@@ -12,20 +12,8 @@ import { SlideTray } from '../components/slide-tray'
 import { Hidden } from 'react-grid-system'
 import SickleCellImage from '../images/sickle-cell.jpg'
 import EkgPrintoutImage from '../images/ekg-printout.jpg'
-import { usePartners } from '../hooks'
-
-const MutedImage = styled(Img)`
-    margin: 1rem;
-    transition: filter 250ms;
-    filter: saturate(25%) opacity(50%);
-    &:hover {
-        filter: saturate(100%) opacity(100%);
-    }
-`
 
 const IndexPage = () => {
-    const partners = usePartners()
-
     return (
         <PageContent>
             <SEO
@@ -78,28 +66,6 @@ const IndexPage = () => {
                         </BulletedList>
                     </CardBody>
                 </Card>
-                
-                <br/>
-                
-                <section id="partners">
-                    <Heading center>Partner Institutions</Heading>
-
-                    <Paragraph>
-                        Researchers and other professionals from the following institutions have received OTA funding from NHLBI to work on the BioData Catalyst ecosystem.
-                    </Paragraph>
-                    
-                    <SlideTray title="" trayHeight="calc(80px + 2rem)">
-                        {
-                            partners.map(
-                                partner => (
-                                    <MutedImage key={ partner.image.id } fixed={ partner.image.childImageSharp.fixed } alt={ `${ partner.name } logo` } />
-                                )
-                            )
-                        }
-                    </SlideTray>
-                </section>
-
-                <br/><br/><br/>
 
             </Container>
 
