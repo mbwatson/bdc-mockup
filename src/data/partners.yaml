@@ -53,8 +53,8 @@
 -
   name: NHLBI Informatics Research Center
   ota: 
-  image: 
+  image: ../images/blank.png
 - 
   name: TOPMed Data Coordinating Center
   ota: 
-  image: 
+  image: ../images/blank.png
