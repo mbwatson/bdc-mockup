@@ -10,6 +10,7 @@ import { List, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
 import { Container as Grid, Row, Col, Hidden } from 'react-grid-system'
 import { usePartners, usePlatforms } from '../hooks'
+import { Accordion, Panel } from '@mwatson/react-accessible-accordion'
 
 const LogoCloud = styled.div`
     text-align: center;
@@ -44,6 +45,7 @@ const AboutPage = () => {
                             <List style={{ position: 'sticky', top: '16rem', paddingRight: '2rem' }} right>
                                 <ListItem primary={ <AnchorLink to="/about#what-we-are">What we Are</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#who-we-are">Who we Are</AnchorLink> } />
+                                <ListItem primary={ <AnchorLink to="/about#ecosystem">Our Ecosystem</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#contributing">Contributing</AnchorLink> } />
                             </List>
                         </Col>
@@ -87,15 +89,11 @@ const AboutPage = () => {
                             </Paragraph>
 
                             <List dense>
-                                { partners.map(partner => <ListItem primary={ partner.name } secondary={ partner.ota } />) }
+                                { partners.map(partner => <ListItem primary={ partner.name } />) }
                             </List>
 
                             <Subheading>Platforms Powering Our Ecosystem</Subheading>
 
-                            <Paragraph>
-                                The following platforms make accessing, searching, and analyzing data in the BioData Catalyst ecosystem possible.
-                            </Paragraph>
-                            
                             <LogoCloud>
                                 {
                                     platforms.map(platform => (
@@ -106,10 +104,46 @@ const AboutPage = () => {
                                 }
                             </LogoCloud>
 
+                        </section>
+
+                        <section id="ecosystem">
+                            <Heading>Out Ecosystem</Heading>
+
                             <Paragraph>
-                                Learn more about <Link to="/about#ecosystem">how these platforms work together</Link>.
+                                For heart, lung, blood, and sleep researchers, the BioData Catalyst ecosystem offers several platforms and services to explore and analyze
+                                both private and publicly-hosted datasets in the cloud using pre-built and custom workflows.
                             </Paragraph>
-                            
+
+                            <Subheading>Want to understand more about the BioData Catalyst Ecosystem?</Subheading>
+
+                            <Paragraph>
+                                In the BioData Catalyst system, researchers interact with data, workspaces, and tools to perform their data analyses.
+                                Researchers can use data hosted within the ecosystem or bring their own data to the ecosystem. 
+                            </Paragraph>
+
+                            <Paragraph>
+                                Researchers who wish to use BioData Catalyst hosted data will find NHLBI Trans-Omics for Precision Medicine (TOPMed) CRAMS, Single-sample VCFs, Multi-sample VCFs (tar), and phenotypic data files.
+                                BioData Catalyst data is hosted in cloud storage and is managed by Gen3 to offer federated access to the hosted data, including access controls and indexing.
+                            </Paragraph>
+
+                            <Paragraph>
+                                Researchers who are approved to work with hosted data can search through datasets and form cohorts that they can export to an analysis workspace.
+                                Researchers do this using one of two platforms integrated into BioData Catalyst, PIC-Sure (search phenotypic data and build cohorts) or Windmill (search data and build cohorts).
+                            </Paragraph>
+
+                            <Paragraph>
+                                Once researchers have completed their searches and created cohorts, they can use one of three platforms integrated into BioData Catalyst to analyze data at scale in cloud-based environments
+                                &mdash; SevenBridges (interactive analysis using Jupyterlab or RStudio), Dockstore (reproducible workflows, CWL, WDL, NFL), and Terra (Interactive Analysis using Jupyter notebooks).
+                            </Paragraph>
+
+                            <Paragraph>
+                                Researchers with their own data may bring private data sets or public data that is not currently hosted on BioData Catalyst to use the ecosystem’s workspaces and tools.
+                                These researchers import their data directly into one of the three platform workspaces – SevenBridges, Dockstore, or Terra.
+                            </Paragraph>
+
+
+
+
                         </section>
             
                         <section id="contributing">
@@ -122,7 +156,7 @@ const AboutPage = () => {
                 
                             <ol style={{ lineHeight: 2 }}>
                                 <li>Ongoing submission and upvoting of ideas via the <ExternalLink to="https://biodatacatalyst.ideascale.com/">NHLBI BioDataCatalyst Ideascale</ExternalLink>.</li>
-                                <li>Soliciting feedback through periodic Requests for Comment (RFC).</li>
+                                <li>Periodic Requests for Comment (RFC) solicitations.</li>
                             </ol>
                         </section>
                                        
