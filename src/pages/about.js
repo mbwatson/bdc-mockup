@@ -102,7 +102,6 @@ const AboutPage = () => {
                                     ))
                                 }
                             </LogoCloud>
-
                         </section>
 
                         <br/>
@@ -141,10 +140,6 @@ const AboutPage = () => {
                                 Researchers with their own data may bring private data sets or public data that is not currently hosted on BioData Catalyst to use the ecosystem’s workspaces and tools.
                                 These researchers import their data directly into one of the three platform workspaces – SevenBridges, Dockstore, or Terra.
                             </Paragraph>
-
-
-
-
                         </section>
             
                         <section id="contributing">
@@ -160,7 +155,6 @@ const AboutPage = () => {
                                 <li>Periodic Requests for Comment (RFC) solicitations.</li>
                             </ol>
                         </section>
-                                       
 
                     </Col>
                 </Row>
