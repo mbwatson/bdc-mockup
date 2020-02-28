@@ -66,7 +66,7 @@ const FaqPage = () => {
                                         <Accordion>
                                             {
                                                 folder.articles.map(article => (
-                                                    <Panel title={ article.title } id={ article.title } styles={ panelStyles }>
+                                                    <Panel key={ article.title } title={ article.title } id={ article.title } styles={ panelStyles }>
                                                         <div dangerouslySetInnerHTML={{ __html: article.description }} />
                                                     </Panel>
                                                 ))

@@ -122,8 +122,8 @@ const ServicesPage = ({ data }) => {
                         <Heading id="actions">What Do You Want to Do Today?</Heading>
 
                         {
-                            services.map(service => (
-                                <Row>
+                            services.map((service, i) => (
+                                <Row key={ i }>
                                     <Card key={ service.cardTitle }>
                                         <CardHeader>{ service.cardTitle }</CardHeader>
                                         <CardBody>
