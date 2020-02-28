@@ -26,6 +26,7 @@ const PlatformImage = styled(Img)`
 
 const AboutPage = () => {
     const partners = usePartners()
+        .sort((p,q) => p.name > q.name)
     const platforms = usePlatforms()
         .map(({ frontmatter: { title, path, logo } }) => ({ title, path, logo }))
     
@@ -45,7 +46,7 @@ const AboutPage = () => {
                                 <ListItem primary={ <AnchorLink to="/about#what-we-are">What we Are</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#who-we-are">Who we Are</AnchorLink> } />
                                 <ListItem primary={ <AnchorLink to="/about#ecosystem">Our Ecosystem</AnchorLink> } />
-                                <ListItem primary={ <AnchorLink to="/about#contributing">Contributing</AnchorLink> } />
+                                <ListItem primary={ <AnchorLink to="/about#contributing">Contribute</AnchorLink> } />
                             </List>
                         </Col>
                     </Hidden>
